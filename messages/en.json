@@ -1,6 +1,178 @@
 {
   "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "hero": {
+      "title": "Book Your Bus Tickets Online",
+      "subtitle": "Travel safely and comfortably with the largest bus network",
+      "search": {
+        "from": "From",
+        "to": "To",
+        "date": "Date",
+        "searchButton": "Search Tickets",
+        "fromPlaceholder": "Departure City",
+        "toPlaceholder": "Arrival City"
+      }
+    },
+    "features": {
+      "easyBooking": {
+        "title": "Easy Booking",
+        "description": "Book your tickets in just a few clicks"
+      },
+      "multipleRoutes": {
+        "title": "Multiple Routes",
+        "description": "Choose from hundreds of destinations"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Get help anytime you need"
+      }
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "schedule": "Schedule",
+    "contact": "Contact",
+    "bookRide": "Book a Ride"
+  },
+
+  "destinations": {
+    "title": "Popular Routes from Chisinau",
+    "bookNow": "Book Now",
+    "price": "From {amount} MDL",
+    "brasov": {
+      "description": "Medieval city surrounded by Carpathian Mountains"
+    },
+    "constanta": {
+      "description": "Beautiful Black Sea resort city"
+    },
+    "sinaia": {
+      "description": "Mountain resort with stunning Peles Castle"
+    },
+    "sighisoara": {
+      "description": "UNESCO World Heritage medieval citadel"
+    },
+    "iasi": {
+      "description": "Cultural capital with historic architecture"
+    },
+    "bucharest": {
+      "description": "Romania's vibrant capital city"
+    }
+  },
+
+  "deals": {
+    "title": "Special Offers",
+    "useCode": "Use code",
+    "validUntil": "Valid until",
+    "applyNow": "Apply Now",
+    "studentDiscount": {
+      "title": "Student Special",
+      "description": "25% off for students with valid student ID. Perfect for weekend trips home!"
+    },
+    "roundTrip": {
+      "title": "Round Trip Discount",
+      "description": "Save 20% when you book your return journey at the same time"
+    },
+    "familyPackage": {
+      "title": "Family Package",
+      "description": "30% off when traveling with family (2 adults + 2 children)"
+    },
+    "seniorDiscount": {
+      "title": "Senior Citizen Offer",
+      "description": "20% discount for passengers over 60 years old"
+    },
+    "earlyBird": {
+      "title": "Early Bird Special",
+      "description": "Book 30 days in advance and get 15% off your ticket"
+    },
+    "groupTravel": {
+      "title": "Group Travel",
+      "description": "25% discount for groups of 4 or more traveling together"
+    }
+  },
+
+  "testimonials": {
+    "title": "What Our Passengers Say",
+    "student": {
+      "name": "Maria Popescu",
+      "location": "Student in Bucharest",
+      "text": "As a student in Bucharest, I regularly travel home to Chisinau. The service is reliable and affordable with my student discount. The WiFi on board helps me study during the journey!",
+      "date": "October 2023"
+    },
+    "family": {
+      "name": "Ion Rusu",
+      "location": "Family Traveler",
+      "text": "We frequently visit our relatives in Iasi with our children. The family package makes it affordable, and the staff is always helpful with our luggage.",
+      "date": "November 2023"
+    },
+    "business": {
+      "name": "Alexandru Munteanu",
+      "location": "Business Traveler",
+      "text": "Regular business trips to Bucharest are comfortable and punctual. The early morning schedules are perfect for my meetings.",
+      "date": "December 2023"
+    },
+    "senior": {
+      "name": "Elena Cojocaru",
+      "location": "Retired Teacher",
+      "text": "I visit my grandchildren in Constanta often. The senior discount is great, and the drivers are always very kind and patient.",
+      "date": "September 2023"
+    },
+    "regular": {
+      "name": "Vasile Moraru",
+      "location": "Regular Commuter",
+      "text": "I've been using this service for two years now. The loyalty program and consistent service quality keep me coming back.",
+      "date": "January 2024"
+    },
+    "tourist": {
+      "name": "Nina Codreanu",
+      "location": "Tourist",
+      "text": "Explored several Romanian cities using their services. The routes are convenient and the travel tips from drivers were very helpful!",
+      "date": "December 2023"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "VitalTrans",
+      "address": "Stefan cel Mare 1, Chisinau, Moldova",
+      "phone": "Phone: +373 22 111 222",
+      "email": "Email: info@vitaltrans.md"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "faqs": "FAQs",
+      "routes": "Routes",
+      "schedule": "Schedule",
+      "about": "About Us"
+    },
+    "social": {
+      "title": "Connect With Us",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "viber": "Viber",
+      "whatsapp": "WhatsApp",
+      "followUs": "Follow us for updates and special offers"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "placeholder": "Enter your email",
+      "button": "Subscribe",
+      "description": "Subscribe to receive updates and special offers",
+      "success": "Thank you for subscribing!",
+      "error": "Please enter a valid email"
+    },
+    "contact": {
+      "title": "Contact Info",
+      "officeHours": "Office Hours: Mon-Sun 8:00-20:00",
+      "emergency": "24/7 Emergency: +373 22 333 444"
+    },
+    "copyright": "© 2024 VitalTrans. All rights reserved.",
+    "legal": {
+      "rights": "All rights reserved",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy"
+    }
   }
 }

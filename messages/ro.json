@@ -1,6 +1,175 @@
 {
   "HomePage": {
-    "title": "salut!",
-    "about": "despre noi"
+    "hero": {
+      "title": "Rezervă Bilete Online",
+      "subtitle": "Călătorește în siguranță și confort cu cea mai mare rețea de autobuze",
+      "search": {
+        "from": "De la",
+        "to": "Până la",
+        "date": "Data",
+        "searchButton": "Caută Bilete",
+        "fromPlaceholder": "Oraș de plecare",
+        "toPlaceholder": "Oraș de sosire"
+      }
+    },
+    "features": {
+      "easyBooking": {
+        "title": "Rezervare Ușoară",
+        "description": "Rezervă bilete cu doar câteva click-uri"
+      },
+      "multipleRoutes": {
+        "title": "Rute Multiple",
+        "description": "Alege din sute de destinații"
+      },
+      "support": {
+        "title": "Suport 24/7",
+        "description": "Primește ajutor oricând ai nevoie"
+      }
+    }
+  },
+  "navigation": {
+    "home": "Acasă",
+    "aboutUs": "Despre Noi",
+    "services": "Servicii",
+    "schedule": "Program",
+    "contact": "Contact",
+    "bookRide": "Rezervă o Călătorie"
+  },
+  "destinations": {
+    "title": "Rute populare din Chișinău",
+    "bookNow": "Rezervă acum",
+    "price": "De la {amount} MDL",
+    "brasov": {
+      "description": "Oraș medieval înconjurat de Munții Carpați"
+    },
+    "constanta": {
+      "description": "Frumos oraș stațiune la Marea Neagră"
+    },
+    "sinaia": {
+      "description": "Stațiune montană cu impresionantul Castel Peleș"
+    },
+    "sighisoara": {
+      "description": "Cetate medievală, patrimoniu mondial UNESCO"
+    },
+    "iasi": {
+      "description": "Capitala culturală cu arhitectură istorică"
+    },
+    "bucharest": {
+      "description": "Capitala vibrantă a României"
+    }
+  },
+  "deals": {
+    "title": "Oferte Speciale",
+    "useCode": "Folosește codul",
+    "validUntil": "Valabil până la",
+    "applyNow": "Aplică acum",
+    "studentDiscount": {
+      "title": "Oferta pentru Studenți",
+      "description": "25% reducere pentru studenți cu legitimație valabilă. Perfect pentru excursii de weekend acasă!"
+    },
+    "roundTrip": {
+      "title": "Reducere pentru Călătorii Dus-Întors",
+      "description": "Economisește 20% când rezervi călătoria de întoarcere în același timp"
+    },
+    "familyPackage": {
+      "title": "Pachet pentru Familie",
+      "description": "30% reducere când călătorești cu familia (2 adulți + 2 copii)"
+    },
+    "seniorDiscount": {
+      "title": "Oferta pentru Pensionari",
+      "description": "20% reducere pentru pasagerii peste 60 de ani"
+    },
+    "earlyBird": {
+      "title": "Oferta Early Bird",
+      "description": "Rezervă cu 30 de zile în avans și obține 15% reducere la bilet"
+    },
+    "groupTravel": {
+      "title": "Călătorii de Grup",
+      "description": "25% reducere pentru grupuri de 4 sau mai multe persoane care călătoresc împreună"
+    }
+  },
+  "testimonials": {
+    "title": "Ce spun pasagerii noștri",
+    "student": {
+      "name": "Maria Popescu",
+      "location": "Student în București",
+      "text": "Ca student în București, călătoresc regulat acasă la Chișinău. Serviciul este de încredere și accesibil cu reducerea pentru studenți. WiFi-ul la bord mă ajută să studiez în timpul călătoriei!",
+      "date": "Octombrie 2023"
+    },
+    "family": {
+      "name": "Ion Rusu",
+      "location": "Călător în familie",
+      "text": "Vizităm frecvent rudele noastre din Iași cu copiii noștri. Pachetul pentru familie face călătoria accesibilă, iar personalul este întotdeauna de ajutor cu bagajele noastre.",
+      "date": "Noiembrie 2023"
+    },
+    "business": {
+      "name": "Alexandru Munteanu",
+      "location": "Călător de afaceri",
+      "text": "Călătoriile regulate de afaceri la București sunt confortabile și punctuale. Orarul de dimineață devreme este perfect pentru întâlnirile mele.",
+      "date": "Decembrie 2023"
+    },
+    "senior": {
+      "name": "Elena Cojocaru",
+      "location": "Profesor pensionar",
+      "text": "Îmi vizitez nepoții în Constanța des. Reducerea pentru pensionari este grozavă, iar șoferii sunt întotdeauna foarte amabili și răbdători.",
+      "date": "Septembrie 2023"
+    },
+    "regular": {
+      "name": "Vasile Moraru",
+      "location": "Navetist regulat",
+      "text": "Folosesc acest serviciu de doi ani. Programul de loialitate și calitatea constantă a serviciilor mă fac să revin mereu.",
+      "date": "Ianuarie 2024"
+    },
+    "tourist": {
+      "name": "Nina Codreanu",
+      "location": "Turist",
+      "text": "Am explorat mai multe orașe românești folosind serviciile lor. Rutele sunt convenabile și sfaturile de călătorie de la șoferi au fost foarte utile!",
+      "date": "Decembrie 2023"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "VitalTrans",
+      "address": "Ștefan cel Mare 1, Chișinău, Moldova",
+      "phone": "Telefon: +373 22 111 222",
+      "email": "Email: info@vitaltrans.md"
+    },
+    "quickLinks": {
+      "title": "Link-uri Rapide",
+      "privacy": "Politica de Confidențialitate",
+      "terms": "Termeni și Condiții",
+      "faqs": "Întrebări Frecvente",
+      "routes": "Rute",
+      "schedule": "Program",
+      "about": "Despre Noi"
+    },
+    "social": {
+      "title": "Conectează-te cu Noi",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "viber": "Viber",
+      "whatsapp": "WhatsApp",
+      "followUs": "Urmărește-ne pentru actualizări și oferte speciale"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "placeholder": "Introduceți email-ul",
+      "button": "Abonează-te",
+      "description": "Abonează-te pentru a primi actualizări și oferte speciale",
+      "success": "Mulțumim pentru abonare!",
+      "error": "Vă rugăm să introduceți un email valid"
+    },
+    "contact": {
+      "title": "Informații de Contact",
+      "officeHours": "Program Birou: Lun-Dum 8:00-20:00",
+      "emergency": "Urgențe 24/7: +373 22 333 444"
+    },
+    "copyright": "© 2024 VitalTrans. Toate drepturile rezervate.",
+    "legal": {
+      "rights": "Toate drepturile rezervate",
+      "terms": "Termeni și Condiții",
+      "privacy": "Politica de Confidențialitate"
+    }
   }
 }
