@@ -20,21 +20,6 @@ export default function LatestDeals() {
       code: "FAMILY30",
       discount: "30%",
     },
-    {
-      type: "seniorDiscount",
-      code: "SENIOR20",
-      discount: "20%",
-    },
-    {
-      type: "earlyBird",
-      code: "EARLY15",
-      discount: "15%",
-    },
-    {
-      type: "groupTravel",
-      code: "GROUP25",
-      discount: "25%",
-    },
   ];
 
   return (

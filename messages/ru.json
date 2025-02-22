@@ -9,7 +9,9 @@
         "date": "Дата",
         "searchButton": "Поиск билетов",
         "fromPlaceholder": "Город отправления",
-        "toPlaceholder": "Город прибытия"
+        "toPlaceholder": "Город прибытия",
+        "passengers": "Пассажиры",
+        "passengersPlaceholder": "Выберите количество пассажиров"
       }
     },
     "features": {

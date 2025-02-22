@@ -9,7 +9,9 @@
         "date": "Data",
         "searchButton": "Caută Bilete",
         "fromPlaceholder": "Oraș de plecare",
-        "toPlaceholder": "Oraș de sosire"
+        "toPlaceholder": "Oraș de sosire",
+        "passengers": "Pasagerii",
+        "passengersPlaceholder": "Numărul de pasageri"
       }
     },
     "features": {

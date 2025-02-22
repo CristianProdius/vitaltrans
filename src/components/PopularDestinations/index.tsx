@@ -7,37 +7,37 @@ export default function PopularDestinations() {
   const destinations = [
     {
       name: "Brasov",
-      image: "/images/brasov.jpg",
+      image: "/images/brasov.png",
       description: t("brasov.description"),
       price: t("price", { amount: "250" }),
     },
     {
       name: "Constanta",
-      image: "/images/constanta.jpg",
+      image: "/images/constanta.png",
       description: t("constanta.description"),
       price: t("price", { amount: "200" }),
     },
     {
       name: "Sinaia",
-      image: "/images/sinaia.jpg",
+      image: "/images/sinaia.png",
       description: t("sinaia.description"),
       price: t("price", { amount: "220" }),
     },
     {
       name: "Sighisoara",
-      image: "/images/sighisoara.jpg",
+      image: "/images/sighisoara.png",
       description: t("sighisoara.description"),
       price: t("price", { amount: "280" }),
     },
     {
       name: "Iasi",
-      image: "/images/iasi.jpg",
+      image: "/images/iasi.png",
       description: t("iasi.description"),
       price: t("price", { amount: "180" }),
     },
     {
       name: "Bucharest",
-      image: "/images/bucharest.jpg",
+      image: "/images/bucharest.png",
       description: t("bucharest.description"),
       price: t("price", { amount: "150" }),
     },

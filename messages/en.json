@@ -9,7 +9,9 @@
         "date": "Date",
         "searchButton": "Search Tickets",
         "fromPlaceholder": "Departure City",
-        "toPlaceholder": "Arrival City"
+        "toPlaceholder": "Arrival City",
+        "passengers": "Passengers",
+        "passengersPlaceholder": "Passengers Number"
       }
     },
     "features": {
