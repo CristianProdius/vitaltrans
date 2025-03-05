@@ -1,0 +1,19 @@
+ * UI Components:
+ * - Button Component:
+ *   - Primary, secondary, tertiary variants
+ *   - Different sizes (small, medium, large)
+ *   - Icon support
+ *   - Loading state
+ * 
+ * - Card Component:
+ *   - Service card variant
+ *   - Testimonial card variant
+ *   - Team member card variant
+ *   - Feature card variant
+ * 
+ * - Form Components:
+ *   - Input fields with validation
+ *   - Dropdown selects
+ *   - Checkboxes and radio buttons
+ *   - Text areas
+ *   - Form submission handling
