@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import {
-  IconUsers,
-  IconHistory,
-  IconFileDescription,
-  IconChartBar,
+  IconBus,
+  IconMapPin,
+  IconLanguage,
+  IconClock,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -14,28 +14,28 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    icon: <IconUsers size={48} className="text-white" />,
-    title: "Expert Dispatching",
+    icon: <IconBus size={48} className="text-white" />,
+    title: "Modern Fleet",
     description:
-      "3+ years of experience finding the best-paying loads and handling negotiations.",
+      "Comfortable, well-maintained buses with amenities for a pleasant journey across Europe.",
   },
   {
-    icon: <IconHistory size={48} className="text-white" />,
-    title: "24/7 Fleet Support",
+    icon: <IconMapPin size={48} className="text-white" />,
+    title: "Extensive Routes",
     description:
-      "Round-the-clock monitoring and issue resolution to keep you on schedule.",
+      "Regular connections between major European cities with convenient pickup and drop-off points.",
   },
   {
-    icon: <IconFileDescription size={48} className="text-white" />,
-    title: "Multilingual Communication",
+    icon: <IconLanguage size={48} className="text-white" />,
+    title: "Multilingual Support",
     description:
-      "Clear communication in English, Russian, and Romanian for smooth operations.",
+      "Customer service in Romanian, English, and other European languages for all passengers.",
   },
   {
-    icon: <IconChartBar size={48} className="text-white" />,
-    title: "Profit Maximization",
+    icon: <IconClock size={48} className="text-white" />,
+    title: "Reliable Schedules",
     description:
-      "Reasonable fees and efficient operations to boost your bottom line.",
+      "Punctual departures and arrivals with real-time updates for your peace of mind.",
   },
 ];
 
@@ -47,8 +47,8 @@ const ServicesOverview = () => {
     setIsVisible(true);
   }, []);
 
-  // Function to handle the "Get a Free Consultation" button click
-  const handleConsultationClick = () => {
+  // Function to handle the "Book Your Trip" button click
+  const handleBookingClick = () => {
     router.push("/contact"); // Navigate to the contact page
   };
 
@@ -72,7 +72,7 @@ const ServicesOverview = () => {
       id="services-section"
       className="relative bg-gradient-to-b from-gray-50 to-white text-black py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D2B48C] to-transparent opacity-70"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#1e3a8a] to-transparent opacity-70"></div>
 
       <div className="max-w-7xl mx-auto">
         {/* Section Headline */}
@@ -83,13 +83,12 @@ const ServicesOverview = () => {
           variants={fadeIn}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-extrabold text-[#B8860B] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
+          <h2 className="text-3xl font-extrabold text-[#1e3a8a] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
             Our Services
           </h2>
           <p className="mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            At RoadRanger, we offer tailored dispatch services to help trucking
-            companies succeed. Let us handle the logistics while you focus on
-            driving profits!
+            At Vital-Trans, we offer reliable passenger transportation services
+            across Europe. Travel with comfort and confidence on every journey!
           </p>
         </motion.div>
 
@@ -103,17 +102,17 @@ const ServicesOverview = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#D2B48C]/30 group"
+              className="flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#1e3a8a]/30 group"
               variants={fadeIn}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -5 }}
             >
               {/* Service Icon */}
-              <div className="bg-gradient-to-br from-[#D2B48C] to-[#B8860B] p-5 rounded-full shadow-md mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-[#1e3a8a] to-[#c8102e] p-5 rounded-full shadow-md mb-6 group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
               {/* Service Title */}
-              <h3 className="text-xl font-bold text-[#B8860B] mb-4 group-hover:text-[#8B4513] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-[#1e3a8a] mb-4 group-hover:text-[#c8102e] transition-colors duration-300">
                 {service.title}
               </h3>
               {/* Service Description */}
@@ -123,7 +122,7 @@ const ServicesOverview = () => {
               {/* Learn More Link */}
               <Link
                 href="/services"
-                className="mt-6 text-[#D2B48C] hover:text-[#8B4513] font-semibold transition-all flex items-center"
+                className="mt-6 text-[#1e3a8a] hover:text-[#c8102e] font-semibold transition-all flex items-center"
               >
                 <span className="mr-1 group-hover:mr-2 transition-all">
                   Learn More
@@ -144,15 +143,15 @@ const ServicesOverview = () => {
           variants={fadeIn}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-24 h-1 bg-gradient-to-r from-transparent via-[#D2B48C] to-transparent"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-24 h-1 bg-gradient-to-r from-transparent via-[#1e3a8a] to-transparent"></div>
 
-          <h3 className="text-2xl sm:text-3xl font-bold text-[#B8860B] mt-8">
-            Partner with RoadRanger Today
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#1e3a8a] mt-8">
+            Travel with Vital-Trans Today
           </h3>
 
           <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            With RoadRanger, every mile means more money in your pocket.
-            Let&apos;s get started on your road to higher profits!
+            With Vital-Trans, every journey is comfortable, reliable, and
+            affordable. Let&apos;s get you to your destination safely!
           </p>
 
           <motion.div
@@ -161,10 +160,10 @@ const ServicesOverview = () => {
             whileTap={{ scale: 0.98 }}
           >
             <ButtonsCard
-              onClick={handleConsultationClick}
-              className="bg-gradient-to-r from-[#D2B48C] to-[#B8860B] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#B8860B] hover:to-[#8B4513] transition-all duration-300 text-lg font-medium tracking-wide"
+              onClick={handleBookingClick}
+              className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#c8102e] hover:to-[#1e3a8a] transition-all duration-300 text-lg font-medium tracking-wide"
             >
-              Get a Free Consultation
+              Book Your Trip Now
             </ButtonsCard>
           </motion.div>
         </motion.div>

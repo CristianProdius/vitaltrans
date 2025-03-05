@@ -1,11 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  IconUsers,
-  IconHistory,
-  IconFileDescription,
-} from "@tabler/icons-react";
+import { IconUsers, IconClock, IconMapPin } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { ButtonsCard } from "../ui/buttons";
 import { useRouter } from "next/navigation";
@@ -18,8 +14,8 @@ const Problem = () => {
     setIsVisible(true);
   }, []);
 
-  // Function to handle the "Get a Free Consultation" button click
-  const handleConsultationClick = () => {
+  // Function to handle the "Book Your Trip Now" button click
+  const handleBookingClick = () => {
     router.push("/contact"); // Navigate to the contact page
   };
 
@@ -41,27 +37,27 @@ const Problem = () => {
   const challenges = [
     {
       icon: <IconUsers size={48} color="white" />,
-      title: "Stressful Negotiations",
+      title: "Uncomfortable Travel",
       description:
-        "Dealing with brokers can be exhausting. We negotiate for you to secure the best-paying loads.",
+        "Long journeys can be exhausting. We provide comfortable, modern buses with all amenities for a pleasant trip.",
     },
     {
-      icon: <IconHistory size={48} color="white" />,
-      title: "Delayed Loads",
+      icon: <IconClock size={48} color="white" />,
+      title: "Unpredictable Schedules",
       description:
-        "Late deliveries hurt your bottom line. We monitor your fleet 24/7 to keep everything on schedule.",
+        "Delays and cancellations ruin plans. Our reliable service ensures on-time departures and arrivals.",
     },
     {
-      icon: <IconFileDescription size={48} color="white" />,
-      title: "Endless Paperwork",
+      icon: <IconMapPin size={48} color="white" />,
+      title: "Limited Destinations",
       description:
-        "Managing documents takes time. We handle all administrative tasks so you can focus on driving.",
+        "Finding direct routes can be challenging. We connect multiple European cities with convenient schedules.",
     },
   ];
 
   return (
     <section className="relative bg-gradient-to-b from-white to-gray-50 text-black py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D2B48C] to-transparent opacity-70"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#1e3a8a] to-transparent opacity-70"></div>
 
       <div className="max-w-7xl mx-auto">
         {/* Headline */}
@@ -72,14 +68,16 @@ const Problem = () => {
           variants={fadeIn}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-extrabold text-[#B8860B] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-tight">
-            <span className="block">Tired of Stressful Negotiations,</span>
-            <span className="block">Delayed Loads & Endless Paperwork?</span>
+          <h2 className="text-3xl font-extrabold text-[#1e3a8a] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-tight">
+            <span className="block">Tired of Uncomfortable Travel,</span>
+            <span className="block">
+              Unpredictable Schedules & Limited Options?
+            </span>
           </h2>
           <p className="mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            RoadRanger is here to solve the biggest challenges trucking
-            companies face. Let us handle the stress while you focus on driving
-            profits!
+            Vital-Trans is here to solve the biggest challenges passengers face
+            when traveling across Europe. Let us handle your journey while you
+            enjoy the ride!
           </p>
         </motion.div>
 
@@ -93,15 +91,15 @@ const Problem = () => {
           {challenges.map((challenge, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#D2B48C]/30 group"
+              className="flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#1e3a8a]/30 group"
               variants={fadeIn}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -5 }}
             >
-              <div className="bg-gradient-to-br from-[#D2B48C] to-[#B8860B] p-5 rounded-full shadow-md mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-[#1e3a8a] to-[#c8102e] p-5 rounded-full shadow-md mb-6 group-hover:scale-110 transition-transform duration-300">
                 {challenge.icon}
               </div>
-              <h3 className="text-xl font-bold text-[#B8860B] mb-4 group-hover:text-[#8B4513] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-[#1e3a8a] mb-4 group-hover:text-[#c8102e] transition-colors duration-300">
                 {challenge.title}
               </h3>
               <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
@@ -119,16 +117,16 @@ const Problem = () => {
           variants={fadeIn}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-24 h-1 bg-gradient-to-r from-transparent via-[#D2B48C] to-transparent"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-24 h-1 bg-gradient-to-r from-transparent via-[#1e3a8a] to-transparent"></div>
 
-          <h3 className="text-2xl sm:text-3xl font-bold text-[#B8860B] mt-8">
-            How RoadRanger Helps You
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#1e3a8a] mt-8">
+            How Vital-Trans Helps You
           </h3>
 
           <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            At RoadRanger, we don&apos;t just dispatch—we partner with you to
-            maximize your success on the road. With us, every mile means more
-            money in your pocket!
+            At Vital-Trans, we don&apos;t just transport passengers—we provide a
+            complete travel experience with comfort, reliability, and
+            convenience across Europe.
           </p>
 
           <motion.div
@@ -137,10 +135,10 @@ const Problem = () => {
             whileTap={{ scale: 0.98 }}
           >
             <ButtonsCard
-              className="bg-gradient-to-r from-[#D2B48C] to-[#B8860B] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#B8860B] hover:to-[#8B4513] transition-all duration-300 text-lg font-medium tracking-wide"
-              onClick={handleConsultationClick}
+              className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#c8102e] hover:to-[#1e3a8a] transition-all duration-300 text-lg font-medium tracking-wide"
+              onClick={handleBookingClick}
             >
-              Get a Free Consultation
+              Book Your Trip Now
             </ButtonsCard>
           </motion.div>
         </motion.div>

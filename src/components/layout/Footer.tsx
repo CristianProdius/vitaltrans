@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   IconBrandFacebook,
-  IconBrandLinkedin,
+  IconBrandInstagram,
   IconPhone,
   IconMail,
   IconMapPin,
@@ -34,7 +34,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-black text-white">
+    <footer className="relative bg-[#0a1e4a] text-white">
       {/* Scroll to top button */}
       <motion.div
         className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10"
@@ -44,7 +44,7 @@ const Footer = () => {
       >
         <button
           onClick={scrollToTop}
-          className="bg-[#D2B48C] text-black hover:bg-black hover:text-[#D2B48C] border border-[#D2B48C] w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300"
+          className="bg-[#1e3a8a] text-white hover:bg-white hover:text-[#1e3a8a] border border-[#1e3a8a] w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300"
           aria-label="Scroll to top"
         >
           <IconArrowUp size={24} />
@@ -64,60 +64,83 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start mb-10 md:mb-0">
             <Image
               src="/logo.png" // Your logo path
-              alt="RoadRanger Logo"
+              alt="Vital-Trans Logo"
               width={250}
-              height={250}
+              height={80}
               className="object-contain drop-shadow-md mb-6"
             />
-            <p className="text-gray-400 max-w-md text-center md:text-left mb-6">
-              Professional dispatch services for trucking companies. With us,
-              every mile means more money in your pocket!
+            <p className="text-gray-300 max-w-md text-center md:text-left mb-6">
+              Professional passenger transportation services across Europe.
+              Safe, comfortable, and reliable journeys for all travelers!
             </p>
             <div className="flex space-x-6">
               <Link
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D2B48C] hover:text-white transition-all duration-300 transform hover:scale-110"
+                className="text-[#c8102e] hover:text-white transition-all duration-300 transform hover:scale-110"
               >
                 <IconBrandFacebook size={28} stroke={1.5} />
               </Link>
               <Link
-                href="https://www.linkedin.com"
+                href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D2B48C] hover:text-white transition-all duration-300 transform hover:scale-110"
+                className="text-[#c8102e] hover:text-white transition-all duration-300 transform hover:scale-110"
               >
-                <IconBrandLinkedin size={28} stroke={1.5} />
+                <IconBrandInstagram size={28} stroke={1.5} />
               </Link>
             </div>
           </div>
 
           {/* Contact Information */}
           <div className="flex flex-col items-center md:items-end">
-            <h3 className="text-xl font-bold text-[#D2B48C] mb-6">
+            <h3 className="text-xl font-bold text-[#c8102e] mb-6">
               Contact Us
             </h3>
             <ul className="space-y-4">
               <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>123 Trucking Lane, Moldova</span>
-                <IconMapPin size={20} className="text-[#D2B48C]" />
+                <span>Bucharest, Romania</span>
+                <IconMapPin size={20} className="text-[#c8102e]" />
               </li>
               <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>+373 123 456 789</span>
-                <IconPhone size={20} className="text-[#D2B48C]" />
+                <span>+40 123 456 789</span>
+                <IconPhone size={20} className="text-[#c8102e]" />
               </li>
               <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>dispatch@roadranger.us</span>
-                <IconMail size={20} className="text-[#D2B48C]" />
+                <span>info@vital-trans.com</span>
+                <IconMail size={20} className="text-[#c8102e]" />
               </li>
               <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>24/7 Availability</span>
-                <IconClock size={20} className="text-[#D2B48C]" />
+                <span>Daily: 8:00 AM - 8:00 PM</span>
+                <IconClock size={20} className="text-[#c8102e]" />
               </li>
             </ul>
           </div>
         </motion.div>
+      </div>
+
+      {/* Copyright */}
+      <div className="bg-[#061636] py-4">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">
+            &copy; {new Date().getFullYear()} Vital-Trans. All rights reserved.
+          </p>
+          <div className="flex gap-4 mt-3 md:mt-0">
+            <Link
+              href="/terms"
+              className="text-gray-400 hover:text-white text-sm"
+            >
+              Terms & Conditions
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-gray-400 hover:text-white text-sm"
+            >
+              Privacy Policy
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

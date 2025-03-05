@@ -8,23 +8,23 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 const testimonials = [
   {
     quote:
-      "RoadRanger has been a game-changer for our trucking business. Their dispatchers are professional, multilingual, and always available when we need them!",
-    name: "John Doe",
-    designation: "Owner-Operator",
+      "Vital-Trans has been my go-to transportation service for years. Their buses are comfortable, always on time, and the staff is incredibly helpful!",
+    name: "Maria Popescu",
+    designation: "Regular Traveler",
     src: "/testimonial1.png",
   },
   {
     quote:
-      "Thanks to RoadRanger, I no longer worry about delayed loads or endless paperwork. Their tailored solutions have saved me time and money.",
-    name: "Jane Smith",
-    designation: "Fleet Manager",
+      "As a student traveling between countries, I appreciate Vital-Trans' affordable prices and reliable schedules. The WiFi on board is a huge plus for long journeys.",
+    name: "Alex Ionescu",
+    designation: "International Student",
     src: "/testimonial2.png",
   },
   {
     quote:
-      "The team at RoadRanger is exceptional! Their 24/7 support and reasonable fees make them the perfect dispatch partner.",
-    name: "Michael Brown",
-    designation: "Logistics Coordinator",
+      "The multilingual staff at Vital-Trans made my travel experience so much easier. I felt comfortable and well-taken care of throughout my entire journey.",
+    name: "Elena Dumitrescu",
+    designation: "Business Traveler",
     src: "/testimonial3.png",
   },
 ];
@@ -43,7 +43,7 @@ const Testimonials = () => {
 
   return (
     <section className="relative bg-gradient-to-b from-gray-50 to-white text-black py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D2B48C] to-transparent opacity-70"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#1e3a8a] to-transparent opacity-70"></div>
 
       <div className="max-w-7xl mx-auto">
         {/* Section Headline */}
@@ -54,12 +54,12 @@ const Testimonials = () => {
           variants={fadeIn}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-extrabold text-[#B8860B] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
-            What Our Clients Say
+          <h2 className="text-3xl font-extrabold text-[#1e3a8a] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
+            What Our Passengers Say
           </h2>
           <p className="mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Hear from trucking professionals who trust RoadRanger to handle
-            their dispatch needs and drive their success.
+            Hear from travelers who trust Vital-Trans for their journeys across
+            Europe.
           </p>
         </motion.div>
 
@@ -71,18 +71,22 @@ const Testimonials = () => {
 };
 
 // Custom version of AnimatedTestimonials that matches your aesthetic
+interface Testimonial {
+  quote: string;
+  name: string;
+  designation: string;
+  src: string;
+}
+
+interface AnimatedTestimonialsCustomProps {
+  testimonials: Testimonial[];
+  autoplay?: boolean;
+}
+
 const AnimatedTestimonialsCustom = ({
   testimonials,
   autoplay = false,
-}: {
-  testimonials: {
-    quote: string;
-    name: string;
-    designation: string;
-    src: string;
-  }[];
-  autoplay?: boolean;
-}) => {
+}: AnimatedTestimonialsCustomProps) => {
   const [active, setActive] = useState(0);
   const [isClient, setIsClient] = useState(false);
 
@@ -107,7 +111,7 @@ const AnimatedTestimonialsCustom = ({
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay, isClient, handleNext]);
+  }, [autoplay, isClient]);
 
   const randomRotateY = (seed: number) => {
     // Use a deterministic random function based on the seed
@@ -203,7 +207,7 @@ const AnimatedTestimonialsCustom = ({
             }}
             className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
           >
-            <h3 className="text-2xl font-bold text-[#B8860B]">
+            <h3 className="text-2xl font-bold text-[#1e3a8a]">
               {testimonials[active].name}
             </h3>
             <p className="text-sm text-gray-600 mb-6">
@@ -238,13 +242,13 @@ const AnimatedTestimonialsCustom = ({
           <div className="flex gap-4 pt-8 justify-end">
             <button
               onClick={handlePrev}
-              className="h-10 w-10 rounded-full bg-white border border-[#D2B48C] flex items-center justify-center group/button hover:bg-[#D2B48C] transition-all duration-300"
+              className="h-10 w-10 rounded-full bg-white border border-[#1e3a8a] flex items-center justify-center group/button hover:bg-[#1e3a8a] transition-all duration-300"
             >
-              <IconArrowLeft className="h-5 w-5 text-[#B8860B] group-hover/button:text-white group-hover/button:rotate-12 transition-all duration-300" />
+              <IconArrowLeft className="h-5 w-5 text-[#1e3a8a] group-hover/button:text-white group-hover/button:rotate-12 transition-all duration-300" />
             </button>
             <button
               onClick={handleNext}
-              className="h-10 w-10 rounded-full bg-gradient-to-r from-[#D2B48C] to-[#B8860B] flex items-center justify-center group/button hover:from-[#B8860B] hover:to-[#8B4513] transition-all duration-300"
+              className="h-10 w-10 rounded-full bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] flex items-center justify-center group/button hover:from-[#c8102e] hover:to-[#1e3a8a] transition-all duration-300"
             >
               <IconArrowRight className="h-5 w-5 text-white group-hover/button:-rotate-12 transition-all duration-300" />
             </button>

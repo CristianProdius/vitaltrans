@@ -3,38 +3,38 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  IconTruckDelivery,
-  IconPhoneCall,
-  IconFileDescription,
-  IconCheck,
+  IconBus,
+  IconCalendar,
+  IconTicket,
+  IconMapPin,
 } from "@tabler/icons-react";
 import { ButtonsCard } from "../ui/buttons";
 import { useRouter } from "next/navigation";
 
 const steps = [
   {
-    icon: <IconPhoneCall size={48} className="text-white" />,
-    title: "Step 1: Contact Us",
+    icon: <IconCalendar size={48} className="text-white" />,
+    title: "Step 1: Choose Your Trip",
     description:
-      "Reach out via phone or email to discuss your dispatch needs and business requirements.",
+      "Select your departure, destination, date, and number of passengers through our easy booking system.",
   },
   {
-    icon: <IconFileDescription size={48} className="text-white" />,
-    title: "Step 2: Share Your Details",
+    icon: <IconTicket size={48} className="text-white" />,
+    title: "Step 2: Book Your Ticket",
     description:
-      "Provide us with your fleet information and preferences so we can tailor our services to your needs.",
+      "Complete your personal details and payment information to secure your reservation instantly.",
   },
   {
-    icon: <IconTruckDelivery size={48} className="text-white" />,
-    title: "Step 3: Start Dispatching",
+    icon: <IconMapPin size={48} className="text-white" />,
+    title: "Step 3: Receive Confirmation",
     description:
-      "We'll begin finding top-paying loads, negotiating deals, and managing your fleet efficiently.",
+      "Get your e-ticket and travel details via email with pickup location and departure time.",
   },
   {
-    icon: <IconCheck size={48} className="text-white" />,
-    title: "Step 4: Focus on Driving",
+    icon: <IconBus size={48} className="text-white" />,
+    title: "Step 4: Enjoy Your Journey",
     description:
-      "Enjoy stress-free operations while we handle the paperwork, communication, and logistics.",
+      "Arrive at the pickup point, board our comfortable bus, and relax while we take you to your destination.",
   },
 ];
 
@@ -46,8 +46,8 @@ const HowItWorksSection = () => {
     setIsVisible(true);
   }, []);
 
-  // Function to handle the "Get a Free Consultation" button click
-  const handleConsultationClick = () => {
+  // Function to handle the "Book Your Trip Now" button click
+  const handleBookingClick = () => {
     router.push("/contact"); // Navigate to the contact page
   };
 
@@ -72,7 +72,7 @@ const HowItWorksSection = () => {
 
     return (
       <div
-        className="hidden lg:block absolute top-1/2 left-full w-full h-0.5 bg-gradient-to-r from-[#D2B48C] to-transparent -translate-y-1/2 pointer-events-none"
+        className="hidden lg:block absolute top-1/2 left-full w-full h-0.5 bg-gradient-to-r from-[#1e3a8a] to-transparent -translate-y-1/2 pointer-events-none"
         style={{ width: "calc(100% - 3rem)" }}
       ></div>
     );
@@ -80,7 +80,7 @@ const HowItWorksSection = () => {
 
   return (
     <section className="relative bg-gradient-to-b from-white to-gray-50 text-black py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D2B48C] to-transparent opacity-70"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#1e3a8a] to-transparent opacity-70"></div>
 
       <div className="max-w-7xl mx-auto">
         {/* Section Headline */}
@@ -91,12 +91,12 @@ const HowItWorksSection = () => {
           variants={fadeIn}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-extrabold text-[#B8860B] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
+          <h2 className="text-3xl font-extrabold text-[#1e3a8a] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
             How It Works
           </h2>
           <p className="mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Getting started with RoadRanger is simple. Follow these four steps
-            to streamline your trucking operations and maximize profits.
+            Booking your journey with Vital-Trans is simple. Follow these four
+            steps to secure your comfortable travel experience across Europe.
           </p>
         </motion.div>
 
@@ -110,23 +110,23 @@ const HowItWorksSection = () => {
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#D2B48C]/30 group relative"
+              className="flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#1e3a8a]/30 group relative"
               variants={fadeIn}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -5 }}
             >
               {/* Step Number Badge */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-[#D2B48C] to-[#B8860B] rounded-full flex items-center justify-center text-white font-bold shadow-md">
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-[#1e3a8a] to-[#c8102e] rounded-full flex items-center justify-center text-white font-bold shadow-md">
                 {index + 1}
               </div>
 
               {/* Step Icon */}
-              <div className="bg-gradient-to-br from-[#D2B48C] to-[#B8860B] p-5 rounded-full shadow-md mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-[#1e3a8a] to-[#c8102e] p-5 rounded-full shadow-md mb-6 group-hover:scale-110 transition-transform duration-300">
                 {step.icon}
               </div>
 
               {/* Step Title */}
-              <h3 className="text-xl font-bold text-[#B8860B] mb-4 group-hover:text-[#8B4513] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-[#1e3a8a] mb-4 group-hover:text-[#c8102e] transition-colors duration-300">
                 {step.title}
               </h3>
 
@@ -150,20 +150,20 @@ const HowItWorksSection = () => {
           transition={{ duration: 0.7, delay: 0.4 }}
         >
           <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-[#B8860B] mb-4">
-              Ready to Simplify Your Trucking Operations?
+            <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">
+              Ready to Travel Across Europe?
             </h3>
             <p className="text-gray-700 mb-6">
-              Join the many trucking companies that trust RoadRanger to handle
-              their dispatch needs. Get started today and experience the
-              difference!
+              Join thousands of satisfied passengers who trust Vital-Trans for
+              their travel needs. Book your journey today and experience
+              comfortable transportation!
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <ButtonsCard
-                onClick={handleConsultationClick}
-                className="bg-gradient-to-r from-[#D2B48C] to-[#B8860B] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#B8860B] hover:to-[#8B4513] transition-all duration-300 text-lg font-medium tracking-wide"
+                onClick={handleBookingClick}
+                className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#c8102e] hover:to-[#1e3a8a] transition-all duration-300 text-lg font-medium tracking-wide"
               >
-                Get Started Today
+                Book Your Trip Now
               </ButtonsCard>
             </motion.div>
           </div>

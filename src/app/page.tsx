@@ -58,7 +58,6 @@ import Testimonials from "@/components/sections/Testimonials";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import FAQ from "@/components/sections/FAQ";
 import CallToActionSection from "@/components/sections/CallToActionSection";
-import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -71,7 +70,6 @@ export default function Home() {
       <HowItWorksSection />
       <FAQ />
       <CallToActionSection />
-      <Footer />
     </main>
   );
 }

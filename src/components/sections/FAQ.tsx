@@ -37,19 +37,19 @@ const FAQItem: React.FC<FAQItemProps> = ({
         whileHover={{ x: 4 }}
         transition={{ duration: 0.2 }}
       >
-        <span className="text-lg font-semibold text-gray-800 pr-8 group-hover:text-[#B8860B] transition-colors">
+        <span className="text-lg font-semibold text-gray-800 pr-8 group-hover:text-[#1e3a8a] transition-colors">
           {question}
         </span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
           className={`rounded-full p-2 ${
-            isOpen ? "bg-[#D2B48C]/20" : "bg-gray-100"
+            isOpen ? "bg-[#1e3a8a]/20" : "bg-gray-100"
           }`}
         >
           <svg
             className={`w-5 h-5 ${
-              isOpen ? "text-[#B8860B]" : "text-[#D2B48C]"
+              isOpen ? "text-[#1e3a8a]" : "text-[#1e3a8a]"
             }`}
             fill="none"
             stroke="currentColor"
@@ -98,41 +98,41 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "What services does RoadRanger provide?",
+      question: "What routes does Vital-Trans operate?",
       answer:
-        "RoadRanger offers expert dispatching, load negotiation, fleet monitoring, multilingual communication, and tailored solutions for trucking companies. We handle all the logistics so you can focus on driving and growing your business.",
+        "Vital-Trans operates passenger transportation routes connecting major cities across Europe, with a focus on Romania, Germany, France, Italy, Spain, and other EU countries. We offer regular scheduled services with convenient pickup and drop-off points in city centers.",
     },
     {
-      question: "How can I get started with RoadRanger?",
+      question: "How can I book a ticket with Vital-Trans?",
       answer:
-        "Getting started is simple! Contact us via email or phone to discuss your needs. We'll guide you through the onboarding process step by step, collect your fleet information, and begin finding the best loads for your trucks right away.",
+        "Booking is simple! You can reserve your seat through our online booking system on our website, by calling our customer service, or visiting one of our partner agencies. We recommend booking in advance to secure your preferred travel date and seat.",
     },
     {
-      question: "Is RoadRanger available around the clock?",
+      question: "What is the luggage allowance?",
       answer:
-        "Yes! Our team provides 24/7 support to ensure your operations run smoothly at all times. We understand that trucking doesn't stop at 5pm, so neither do we. Our dispatchers are always available to handle any issues that arise.",
+        "Each passenger can bring one large suitcase (up to 30kg) and one piece of hand luggage free of charge. Additional luggage may be transported for a small fee, subject to available space. Please inform us in advance if you plan to travel with extra luggage.",
     },
     {
-      question: "What languages do your dispatchers speak?",
+      question: "Do you offer discounts for certain passengers?",
       answer:
-        "Our dispatchers are fluent in English, Russian, and Romanian to ensure clear communication with brokers and shippers. This multilingual capability helps eliminate miscommunications and ensures smooth operations for all parties involved.",
+        "Yes! We offer special discounts for children (under 12), students with valid ID, seniors (over 65), and regular travelers. We also provide group booking discounts for families or groups traveling together. Contact our customer service for details.",
     },
     {
-      question: "What are your fees?",
+      question: "What amenities are available on your buses?",
       answer:
-        "We offer a reasonable fee structure designed to maximize owner-operator profits while providing high-quality service. Our pricing is transparent with no hidden costs, allowing you to plan your finances effectively. Contact us for specific pricing based on your fleet size and needs.",
+        "Our modern fleet is equipped with air conditioning, comfortable reclining seats, free WiFi, USB charging ports, and onboard restrooms. On longer journeys, we make regular comfort stops at service areas with food and refreshment options.",
     },
     {
-      question: "Do you offer additional services beyond dispatching?",
+      question: "What happens if I need to change or cancel my booking?",
       answer:
-        "Yes! We also provide optional accounting services to save you time and money while managing your business effectively. Our comprehensive approach ensures all aspects of your trucking business are handled professionally, allowing you to focus on growth.",
+        "You can modify or cancel your reservation up to 48 hours before departure with minimal or no fees, depending on your ticket type. Changes made less than 48 hours before departure may incur additional charges. Please contact our customer service for assistance with changes.",
     },
   ];
 
   const router = useRouter();
 
-  // Function to handle the "Get a Free Consultation" button click
-  const handleConsultationClick = () => {
+  // Function to handle the "Book Your Trip" button click
+  const handleBookingClick = () => {
     router.push("/contact"); // Navigate to the contact page
   };
 
@@ -143,7 +143,7 @@ const FAQ = () => {
 
   return (
     <section className="relative bg-gradient-to-b from-gray-50 to-white text-black py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D2B48C] to-transparent opacity-70"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#1e3a8a] to-transparent opacity-70"></div>
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -155,12 +155,12 @@ const FAQ = () => {
           variants={fadeIn}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-extrabold text-[#B8860B] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
+          <h2 className="text-3xl font-extrabold text-[#1e3a8a] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
             Frequently Asked Questions
           </h2>
           <p className="mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Find answers to common questions about our dispatch services and how
-            we can help your trucking business thrive.
+            Find answers to common questions about our passenger transportation
+            services and how to make your journey comfortable and convenient.
           </p>
         </motion.div>
 
@@ -169,7 +169,7 @@ const FAQ = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 hover:border-[#D2B48C]/20 transition-all duration-300"
+          className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 hover:border-[#1e3a8a]/20 transition-all duration-300"
         >
           {faqs.map((faq, index) => (
             <FAQItem
@@ -192,19 +192,20 @@ const FAQ = () => {
           transition={{ duration: 0.7, delay: 0.4 }}
         >
           <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-[#B8860B] mb-4">
+            <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">
               Still Have Questions?
             </h3>
             <p className="text-gray-700 mb-6">
-              Our team is ready to answer any questions you might have about our
-              dispatch services. Get in touch today for personalized assistance!
+              Our customer service team is ready to answer any questions you
+              might have about our routes, bookings, or services. Get in touch
+              today for personalized assistance!
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <ButtonsCard
-                onClick={handleConsultationClick}
-                className="bg-gradient-to-r from-[#D2B48C] to-[#B8860B] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#B8860B] hover:to-[#8B4513] transition-all duration-300 text-lg font-medium tracking-wide"
+                onClick={handleBookingClick}
+                className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#c8102e] hover:to-[#1e3a8a] transition-all duration-300 text-lg font-medium tracking-wide"
               >
-                Contact Us for More Details
+                Contact Us or Book Your Trip
               </ButtonsCard>
             </motion.div>
           </div>
