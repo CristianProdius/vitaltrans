@@ -1,0 +1,48 @@
+{
+  "Header": {
+    "logoAlt": "Logo Vital-Trans",
+    "contact": "Contact",
+    "openMenu": "Deschide meniul principal"
+  },
+
+  "Hero": {
+    "backgroundAlt": "Transport cu autobuzul",
+    "companyName": "Vital-Trans",
+    "tagline": "Transport sigur și confortabil de pasageri în toată Europa!",
+    "contactUs": "Contactează-ne",
+    "ourRoutes": "Rutele noastre",
+    "yearsExperience": "Ani de experiență",
+    "routes": "Rute",
+    "customerSupport": "Suport clienți",
+    "bookYourTrip": "Rezervă-ți călătoria",
+    "departure": "Plecare",
+    "arrival": "Sosire",
+    "date": "Data",
+    "adults": "Adulți",
+    "children": "Copii",
+    "students": "Studenți",
+    "fullName": "Nume complet",
+    "phoneNumber": "Număr de telefon",
+    "email": "Email",
+    "selectDeparture": "Selectează plecarea",
+    "selectArrival": "Selectează sosirea",
+    "fullNamePlaceholder": "ex. Ion Popescu",
+    "phonePlaceholder": "Numărul tău de telefon",
+    "emailPlaceholder": "Adresa ta de email",
+    "termsText": "Am citit și accept",
+    "termsLink": "Termenii și condițiile",
+    "completeReservation": "Completează rezervarea",
+    "bookingInquiry": "Cerere de rezervare",
+    "bookingDetails": "Vă rugăm să găsiți detaliile rezervării mele atașate.",
+    "cities": {
+      "bucharest": "București",
+      "berlin": "Berlin",
+      "paris": "Paris",
+      "rome": "Roma",
+      "london": "Londra",
+      "madrid": "Madrid",
+      "vienna": "Viena",
+      "amsterdam": "Amsterdam"
+    }
+  }
+}

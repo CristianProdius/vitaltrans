@@ -111,7 +111,7 @@ const AnimatedTestimonialsCustom = ({
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay, isClient]);
+  }, [autoplay, isClient, handleNext]);
 
   const randomRotateY = (seed: number) => {
     // Use a deterministic random function based on the seed

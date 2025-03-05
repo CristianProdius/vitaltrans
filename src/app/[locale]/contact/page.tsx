@@ -10,10 +10,12 @@ import {
   IconMapPin,
   IconClock,
 } from "@tabler/icons-react";
+import Header from "@/components/layout/Header";
 
 const Contact = () => {
   return (
     <>
+      <Header />
       <section className="relative bg-gray-50 overflow-hidden min-h-screen">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100"></div>

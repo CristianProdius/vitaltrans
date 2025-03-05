@@ -1,0 +1,48 @@
+{
+  "Header": {
+    "logoAlt": "Vital-Trans Logo",
+    "contact": "Contact",
+    "openMenu": "Open main menu"
+  },
+
+  "Hero": {
+    "backgroundAlt": "Bus transportation",
+    "companyName": "Vital-Trans",
+    "tagline": "Safe and comfortable passenger transportation across Europe!",
+    "contactUs": "Contact Us",
+    "ourRoutes": "Our Routes",
+    "yearsExperience": "Years Experience",
+    "routes": "Routes",
+    "customerSupport": "Customer Support",
+    "bookYourTrip": "Book Your Trip",
+    "departure": "Departure",
+    "arrival": "Arrival",
+    "date": "Date",
+    "adults": "Adults",
+    "children": "Children",
+    "students": "Students",
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "email": "Email",
+    "selectDeparture": "Select departure",
+    "selectArrival": "Select arrival",
+    "fullNamePlaceholder": "e.g. John Smith",
+    "phonePlaceholder": "Your phone number",
+    "emailPlaceholder": "Your email address",
+    "termsText": "I have read and accept the",
+    "termsLink": "Terms and Conditions",
+    "completeReservation": "Complete Reservation",
+    "bookingInquiry": "Booking Inquiry",
+    "bookingDetails": "Please find my booking details attached.",
+    "cities": {
+      "bucharest": "Bucharest",
+      "berlin": "Berlin",
+      "paris": "Paris",
+      "rome": "Rome",
+      "london": "London",
+      "madrid": "Madrid",
+      "vienna": "Vienna",
+      "amsterdam": "Amsterdam"
+    }
+  }
+}

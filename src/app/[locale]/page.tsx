@@ -58,10 +58,13 @@ import Testimonials from "@/components/sections/Testimonials";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import FAQ from "@/components/sections/FAQ";
 import CallToActionSection from "@/components/sections/CallToActionSection";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
     <main>
+      <Header />
       <Hero />
       <Problem />
       <ServicesOverview />
@@ -70,6 +73,7 @@ export default function Home() {
       <HowItWorksSection />
       <FAQ />
       <CallToActionSection />
+      <Footer />
     </main>
   );
 }

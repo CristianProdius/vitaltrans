@@ -1,0 +1,48 @@
+{
+  "Header": {
+    "logoAlt": "Логотип Vital-Trans",
+    "contact": "Контакт",
+    "openMenu": "Открыть главное меню"
+  },
+
+  "Hero": {
+    "backgroundAlt": "Автобусные перевозки",
+    "companyName": "Витал-Транс",
+    "tagline": "Безопасные и комфортные пассажирские перевозки по всей Европе!",
+    "contactUs": "Свяжитесь с нами",
+    "ourRoutes": "Наши маршруты",
+    "yearsExperience": "Лет опыта",
+    "routes": "Маршруты",
+    "customerSupport": "Поддержка клиентов",
+    "bookYourTrip": "Забронируйте поездку",
+    "departure": "Отправление",
+    "arrival": "Прибытие",
+    "date": "Дата",
+    "adults": "Взрослые",
+    "children": "Дети",
+    "students": "Студенты",
+    "fullName": "Полное имя",
+    "phoneNumber": "Номер телефона",
+    "email": "Электронная почта",
+    "selectDeparture": "Выберите отправление",
+    "selectArrival": "Выберите прибытие",
+    "fullNamePlaceholder": "например, Иван Иванов",
+    "phonePlaceholder": "Ваш номер телефона",
+    "emailPlaceholder": "Ваш адрес электронной почты",
+    "termsText": "Я прочитал и принимаю",
+    "termsLink": "Условия и положения",
+    "completeReservation": "Завершить бронирование",
+    "bookingInquiry": "Запрос на бронирование",
+    "bookingDetails": "Пожалуйста, найдите мои данные о бронировании во вложении.",
+    "cities": {
+      "bucharest": "Бухарест",
+      "berlin": "Берлин",
+      "paris": "Париж",
+      "rome": "Рим",
+      "london": "Лондон",
+      "madrid": "Мадрид",
+      "vienna": "Вена",
+      "amsterdam": "Амстердам"
+    }
+  }
+}
