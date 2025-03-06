@@ -5,8 +5,10 @@ import { IconUsers, IconClock, IconMapPin } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { ButtonsCard } from "../ui/buttons";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const Problem = () => {
+  const t = useTranslations("Problem");
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -37,21 +39,18 @@ const Problem = () => {
   const challenges = [
     {
       icon: <IconUsers size={48} color="white" />,
-      title: "Uncomfortable Travel",
-      description:
-        "Long journeys can be exhausting. We provide comfortable, modern buses with all amenities for a pleasant trip.",
+      title: t("challenges.uncomfortable.title"),
+      description: t("challenges.uncomfortable.description"),
     },
     {
       icon: <IconClock size={48} color="white" />,
-      title: "Unpredictable Schedules",
-      description:
-        "Delays and cancellations ruin plans. Our reliable service ensures on-time departures and arrivals.",
+      title: t("challenges.unpredictable.title"),
+      description: t("challenges.unpredictable.description"),
     },
     {
       icon: <IconMapPin size={48} color="white" />,
-      title: "Limited Destinations",
-      description:
-        "Finding direct routes can be challenging. We connect multiple European cities with convenient schedules.",
+      title: t("challenges.limited.title"),
+      description: t("challenges.limited.description"),
     },
   ];
 
@@ -69,15 +68,11 @@ const Problem = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-extrabold text-[#1e3a8a] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-tight">
-            <span className="block">Tired of Uncomfortable Travel,</span>
-            <span className="block">
-              Unpredictable Schedules & Limited Options?
-            </span>
+            <span className="block">{t("headline.part1")}</span>
+            <span className="block">{t("headline.part2")}</span>
           </h2>
           <p className="mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Vital-Trans is here to solve the biggest challenges passengers face
-            when traveling across Europe. Let us handle your journey while you
-            enjoy the ride!
+            {t("intro.description")}
           </p>
         </motion.div>
 
@@ -120,13 +115,11 @@ const Problem = () => {
           <div className="absolute left-1/2 -translate-x-1/2 top-0 w-24 h-1 bg-gradient-to-r from-transparent via-[#1e3a8a] to-transparent"></div>
 
           <h3 className="text-2xl sm:text-3xl font-bold text-[#1e3a8a] mt-8">
-            How Vital-Trans Helps You
+            {t("solution.title")}
           </h3>
 
           <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            At Vital-Trans, we don&apos;t just transport passengers—we provide a
-            complete travel experience with comfort, reliability, and
-            convenience across Europe.
+            {t("solution.description")}
           </p>
 
           <motion.div
@@ -138,7 +131,7 @@ const Problem = () => {
               className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#c8102e] hover:to-[#1e3a8a] transition-all duration-300 text-lg font-medium tracking-wide"
               onClick={handleBookingClick}
             >
-              Book Your Trip Now
+              {t("button.bookTrip")}
             </ButtonsCard>
           </motion.div>
         </motion.div>

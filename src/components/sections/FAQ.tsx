@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { ButtonsCard } from "../ui/buttons";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface FAQItemProps {
   question: string;
@@ -88,9 +89,11 @@ const FAQItem: React.FC<FAQItemProps> = ({
 };
 
 const FAQ = () => {
+  const t = useTranslations("FAQ");
   const [openIndex, setOpenIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const headerRef = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
     setIsVisible(true);
@@ -98,38 +101,30 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "What routes does Vital-Trans operate?",
-      answer:
-        "Vital-Trans operates passenger transportation routes connecting major cities across Europe, with a focus on Romania, Germany, France, Italy, Spain, and other EU countries. We offer regular scheduled services with convenient pickup and drop-off points in city centers.",
+      question: t("questions.routes.question"),
+      answer: t("questions.routes.answer"),
     },
     {
-      question: "How can I book a ticket with Vital-Trans?",
-      answer:
-        "Booking is simple! You can reserve your seat through our online booking system on our website, by calling our customer service, or visiting one of our partner agencies. We recommend booking in advance to secure your preferred travel date and seat.",
+      question: t("questions.booking.question"),
+      answer: t("questions.booking.answer"),
     },
     {
-      question: "What is the luggage allowance?",
-      answer:
-        "Each passenger can bring one large suitcase (up to 30kg) and one piece of hand luggage free of charge. Additional luggage may be transported for a small fee, subject to available space. Please inform us in advance if you plan to travel with extra luggage.",
+      question: t("questions.luggage.question"),
+      answer: t("questions.luggage.answer"),
     },
     {
-      question: "Do you offer discounts for certain passengers?",
-      answer:
-        "Yes! We offer special discounts for children (under 12), students with valid ID, seniors (over 65), and regular travelers. We also provide group booking discounts for families or groups traveling together. Contact our customer service for details.",
+      question: t("questions.discounts.question"),
+      answer: t("questions.discounts.answer"),
     },
     {
-      question: "What amenities are available on your buses?",
-      answer:
-        "Our modern fleet is equipped with air conditioning, comfortable reclining seats, free WiFi, USB charging ports, and onboard restrooms. On longer journeys, we make regular comfort stops at service areas with food and refreshment options.",
+      question: t("questions.amenities.question"),
+      answer: t("questions.amenities.answer"),
     },
     {
-      question: "What happens if I need to change or cancel my booking?",
-      answer:
-        "You can modify or cancel your reservation up to 48 hours before departure with minimal or no fees, depending on your ticket type. Changes made less than 48 hours before departure may incur additional charges. Please contact our customer service for assistance with changes.",
+      question: t("questions.changes.question"),
+      answer: t("questions.changes.answer"),
     },
   ];
-
-  const router = useRouter();
 
   // Function to handle the "Book Your Trip" button click
   const handleBookingClick = () => {
@@ -156,11 +151,10 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-extrabold text-[#1e3a8a] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
-            Frequently Asked Questions
+            {t("headline")}
           </h2>
           <p className="mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Find answers to common questions about our passenger transportation
-            services and how to make your journey comfortable and convenient.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -193,19 +187,15 @@ const FAQ = () => {
         >
           <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">
-              Still Have Questions?
+              {t("cta.title")}
             </h3>
-            <p className="text-gray-700 mb-6">
-              Our customer service team is ready to answer any questions you
-              might have about our routes, bookings, or services. Get in touch
-              today for personalized assistance!
-            </p>
+            <p className="text-gray-700 mb-6">{t("cta.description")}</p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <ButtonsCard
                 onClick={handleBookingClick}
                 className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#c8102e] hover:to-[#1e3a8a] transition-all duration-300 text-lg font-medium tracking-wide"
               >
-                Contact Us or Book Your Trip
+                {t("cta.button")}
               </ButtonsCard>
             </motion.div>
           </div>

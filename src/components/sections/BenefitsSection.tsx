@@ -10,47 +10,10 @@ import {
   IconClock,
   IconDeviceMobile,
 } from "@tabler/icons-react";
-
-const benefits = [
-  {
-    icon: <IconBus size={48} className="text-white" />,
-    title: "Modern Fleet",
-    description:
-      "Comfortable, well-maintained buses with air conditioning, WiFi, and ample luggage space for a pleasant journey.",
-  },
-  {
-    icon: <IconDiscount2 size={48} className="text-white" />,
-    title: "Competitive Pricing",
-    description:
-      "Affordable fares with special discounts for students, children, and regular travelers. Group booking discounts available.",
-  },
-  {
-    icon: <IconLanguage size={48} className="text-white" />,
-    title: "Multilingual Staff",
-    description:
-      "Our staff speaks Romanian, English, and other European languages to assist all passengers with their needs.",
-  },
-  {
-    icon: <IconMapPin size={48} className="text-white" />,
-    title: "Extensive Route Network",
-    description:
-      "Regular connections between major European cities with convenient pickup and drop-off points in city centers.",
-  },
-  {
-    icon: <IconClock size={48} className="text-white" />,
-    title: "Reliable Schedules",
-    description:
-      "Punctual departures and arrivals with real-time updates. We value your time and plan for efficient travel.",
-  },
-  {
-    icon: <IconDeviceMobile size={48} className="text-white" />,
-    title: "Easy Online Booking",
-    description:
-      "Simple reservation system available 24/7, allowing you to book tickets from anywhere with instant confirmation.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const BenefitsSection = () => {
+  const t = useTranslations("BenefitsSection");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -81,6 +44,39 @@ const BenefitsSection = () => {
     },
   };
 
+  const benefits = [
+    {
+      icon: <IconBus size={48} className="text-white" />,
+      title: t("benefits.modernFleet.title"),
+      description: t("benefits.modernFleet.description"),
+    },
+    {
+      icon: <IconDiscount2 size={48} className="text-white" />,
+      title: t("benefits.competitivePricing.title"),
+      description: t("benefits.competitivePricing.description"),
+    },
+    {
+      icon: <IconLanguage size={48} className="text-white" />,
+      title: t("benefits.multilingualStaff.title"),
+      description: t("benefits.multilingualStaff.description"),
+    },
+    {
+      icon: <IconMapPin size={48} className="text-white" />,
+      title: t("benefits.extensiveRoutes.title"),
+      description: t("benefits.extensiveRoutes.description"),
+    },
+    {
+      icon: <IconClock size={48} className="text-white" />,
+      title: t("benefits.reliableSchedules.title"),
+      description: t("benefits.reliableSchedules.description"),
+    },
+    {
+      icon: <IconDeviceMobile size={48} className="text-white" />,
+      title: t("benefits.easyBooking.title"),
+      description: t("benefits.easyBooking.description"),
+    },
+  ];
+
   return (
     <section className="relative bg-white text-black py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#1e3a8a] to-transparent opacity-70"></div>
@@ -95,12 +91,10 @@ const BenefitsSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-extrabold text-[#1e3a8a] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
-            Why Travel with Us?
+            {t("headline")}
           </h2>
           <p className="mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            At Vital-Trans, we don&apos;t just transport passengers—we provide a
-            complete travel experience with comfort, reliability, and
-            convenience across Europe.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -144,7 +138,7 @@ const BenefitsSection = () => {
         >
           <div className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] p-6 sm:p-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-white text-center">
-              How We Compare to Other Transportation Options
+              {t("comparison.title")}
             </h3>
           </div>
 
@@ -155,20 +149,13 @@ const BenefitsSection = () => {
                 <span className="w-8 h-8 inline-flex items-center justify-center bg-gray-200 rounded-full mr-3 text-gray-700 text-sm font-bold">
                   VS
                 </span>
-                Other Transportation
+                {t("comparison.others.title")}
               </h4>
               <ul className="space-y-4 text-gray-600">
-                {[
-                  "Higher costs for similar routes",
-                  "Unpredictable schedules and delays",
-                  "Limited luggage allowance",
-                  "Uncomfortable seating for long journeys",
-                  "Few or no onboard amenities",
-                  "Limited pickup and drop-off locations",
-                ].map((item, i) => (
+                {[1, 2, 3, 4, 5, 6].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <span className="text-red-500 mr-2">✕</span>
-                    <span>{item}</span>
+                    <span>{t(`comparison.others.points.${item}`)}</span>
                   </li>
                 ))}
               </ul>
@@ -180,20 +167,13 @@ const BenefitsSection = () => {
                 <span className="w-8 h-8 inline-flex items-center justify-center bg-gradient-to-br from-[#1e3a8a] to-[#c8102e] rounded-full mr-3 text-white text-sm font-bold">
                   VT
                 </span>
-                Vital-Trans
+                {t("comparison.vitalTrans.title")}
               </h4>
               <ul className="space-y-4 text-gray-700">
-                {[
-                  "Competitive pricing with special discounts",
-                  "Reliable, punctual schedules",
-                  "Generous luggage allowance",
-                  "Comfortable seating with extra legroom",
-                  "Free WiFi, charging ports, and climate control",
-                  "Convenient city center pickup and drop-off points",
-                ].map((item, i) => (
+                {[1, 2, 3, 4, 5, 6].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <span className="text-green-500 mr-2">✓</span>
-                    <span>{item}</span>
+                    <span>{t(`comparison.vitalTrans.points.${item}`)}</span>
                   </li>
                 ))}
               </ul>
@@ -202,8 +182,7 @@ const BenefitsSection = () => {
 
           <div className="bg-gradient-to-r from-[#1e3a8a]/10 to-[#c8102e]/10 p-4 text-center">
             <p className="text-[#1e3a8a] font-medium">
-              Choose the transportation service that prioritizes your comfort
-              and convenience
+              {t("comparison.footer")}
             </p>
           </div>
         </motion.div>

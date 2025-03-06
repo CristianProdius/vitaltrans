@@ -54,7 +54,7 @@ import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
 import ServicesOverview from "@/components/sections/ServicesOverview";
 import BenefitsSection from "@/components/sections/BenefitsSection";
-import Testimonials from "@/components/sections/Testimonials";
+//import Testimonials from "@/components/sections/Testimonials";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import FAQ from "@/components/sections/FAQ";
 import CallToActionSection from "@/components/sections/CallToActionSection";
@@ -69,7 +69,7 @@ export default function Home() {
       <Problem />
       <ServicesOverview />
       <BenefitsSection />
-      <Testimonials />
+      {/*<Testimonials />*/}
       <HowItWorksSection />
       <FAQ />
       <CallToActionSection />

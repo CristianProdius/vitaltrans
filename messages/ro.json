@@ -44,5 +44,214 @@
       "vienna": "Viena",
       "amsterdam": "Amsterdam"
     }
+  },
+  "Problem": {
+    "headline": {
+      "part1": "Sătul de călătorii incomode,",
+      "part2": "orare imprevizibile și opțiuni limitate?"
+    },
+    "intro": {
+      "description": "Vital-Trans este aici pentru a rezolva cele mai mari provocări pe care le întâmpină pasagerii atunci când călătoresc prin Europa. Lăsați-ne pe noi să ne ocupăm de călătoria dvs. în timp ce vă bucurați de drum!"
+    },
+    "challenges": {
+      "uncomfortable": {
+        "title": "Călătorii incomode",
+        "description": "Călătoriile lungi pot fi obositoare. Oferim autobuze moderne și confortabile cu toate facilitățile pentru o călătorie plăcută."
+      },
+      "unpredictable": {
+        "title": "Orare imprevizibile",
+        "description": "Întârzierile și anulările vă pot strica planurile. Serviciul nostru de încredere asigură plecări și sosiri la timp."
+      },
+      "limited": {
+        "title": "Destinații limitate",
+        "description": "Găsirea rutelor directe poate fi o provocare. Conectăm mai multe orașe europene cu orare convenabile."
+      }
+    },
+    "solution": {
+      "title": "Cum vă ajută Vital-Trans",
+      "description": "La Vital-Trans, nu doar transportăm pasageri - oferim o experiență completă de călătorie cu confort, fiabilitate și conveniență în toată Europa."
+    },
+    "button": {
+      "bookTrip": "Rezervă-ți călătoria acum"
+    }
+  },
+
+  "ServicesOverview": {
+    "headline": "Serviciile noastre",
+    "description": "La Vital-Trans, oferim servicii de transport de pasageri de încredere în toată Europa. Călătoriți cu confort și încredere la fiecare drum!",
+    "services": {
+      "modernFleet": {
+        "title": "Flotă modernă",
+        "description": "Autobuze confortabile și bine întreținute, cu facilități pentru o călătorie plăcută în toată Europa."
+      },
+      "extensiveRoutes": {
+        "title": "Rute extinse",
+        "description": "Conexiuni regulate între orașele mari europene cu puncte de preluare și debarcare convenabile."
+      },
+      "multilingualSupport": {
+        "title": "Suport multilingv",
+        "description": "Serviciu pentru clienți în română, engleză și alte limbi europene pentru toți pasagerii."
+      },
+      "reliableSchedules": {
+        "title": "Orare de încredere",
+        "description": "Plecări și sosiri punctuale cu actualizări în timp real pentru liniștea dvs."
+      }
+    },
+    "learnMore": "Află mai multe",
+    "cta": {
+      "title": "Călătorește cu Vital-Trans astăzi",
+      "description": "Cu Vital-Trans, fiecare călătorie este confortabilă, de încredere și accesibilă. Să vă ducem în siguranță la destinație!"
+    },
+    "bookTrip": "Rezervă-ți călătoria acum"
+  },
+
+  "BenefitsSection": {
+    "headline": "De ce să călătoriți cu noi?",
+    "description": "La Vital-Trans, nu doar transportăm pasageri - oferim o experiență completă de călătorie cu confort, fiabilitate și conveniență în toată Europa.",
+    "benefits": {
+      "modernFleet": {
+        "title": "Flotă modernă",
+        "description": "Autobuze confortabile și bine întreținute, cu aer condiționat, WiFi și spațiu generos pentru bagaje pentru o călătorie plăcută."
+      },
+      "competitivePricing": {
+        "title": "Prețuri competitive",
+        "description": "Tarife accesibile cu reduceri speciale pentru studenți, copii și călători frecvenți. Reduceri pentru rezervări de grup disponibile."
+      },
+      "multilingualStaff": {
+        "title": "Personal multilingv",
+        "description": "Personalul nostru vorbește română, engleză și alte limbi europene pentru a asista toți pasagerii cu nevoile lor."
+      },
+      "extensiveRoutes": {
+        "title": "Rețea extinsă de rute",
+        "description": "Conexiuni regulate între orașele mari europene cu puncte de preluare și debarcare convenabile în centrele orașelor."
+      },
+      "reliableSchedules": {
+        "title": "Orare de încredere",
+        "description": "Plecări și sosiri punctuale cu actualizări în timp real. Valorizăm timpul dvs. și planificăm pentru o călătorie eficientă."
+      },
+      "easyBooking": {
+        "title": "Rezervare online ușoară",
+        "description": "Sistem simplu de rezervare disponibil 24/7, permițându-vă să rezervați bilete de oriunde cu confirmare instantanee."
+      }
+    },
+    "comparison": {
+      "title": "Cum ne comparăm cu alte opțiuni de transport",
+      "others": {
+        "title": "Alte transporturi",
+        "points": {
+          "1": "Costuri mai mari pentru rute similare",
+          "2": "Orare imprevizibile și întârzieri",
+          "3": "Alocație limitată pentru bagaje",
+          "4": "Scaune incomode pentru călătorii lungi",
+          "5": "Puține sau niciun fel de facilități la bord",
+          "6": "Puncte limitate de preluare și debarcare"
+        }
+      },
+      "vitalTrans": {
+        "title": "Vital-Trans",
+        "points": {
+          "1": "Prețuri competitive cu reduceri speciale",
+          "2": "Orare de încredere și punctuale",
+          "3": "Alocație generoasă pentru bagaje",
+          "4": "Scaune confortabile cu spațiu suplimentar pentru picioare",
+          "5": "WiFi gratuit, porturi de încărcare și control climatic",
+          "6": "Puncte de preluare și debarcare convenabile în centrele orașelor"
+        }
+      },
+      "footer": "Alegeți serviciul de transport care prioritizează confortul și conveniența dvs."
+    }
+  },
+
+  "HowItWorksSection": {
+    "headline": "Cum funcționează",
+    "description": "Rezervarea călătoriei dvs. cu Vital-Trans este simplă. Urmați acești patru pași pentru a vă asigura o experiență de călătorie confortabilă în toată Europa.",
+    "steps": {
+      "choose": {
+        "title": "Pasul 1: Alegeți călătoria",
+        "description": "Selectați plecarea, destinația, data și numărul de pasageri prin sistemul nostru de rezervare ușor de utilizat."
+      },
+      "book": {
+        "title": "Pasul 2: Rezervați biletul",
+        "description": "Completați detaliile personale și informațiile de plată pentru a vă asigura rezervarea instantaneu."
+      },
+      "receive": {
+        "title": "Pasul 3: Primiți confirmarea",
+        "description": "Primiți biletul electronic și detaliile călătoriei prin email cu locația de preluare și ora plecării."
+      },
+      "enjoy": {
+        "title": "Pasul 4: Bucurați-vă de călătorie",
+        "description": "Ajungeți la punctul de preluare, urcați în autobuzul nostru confortabil și relaxați-vă în timp ce vă ducem la destinație."
+      }
+    },
+    "cta": {
+      "title": "Gata să călătoriți prin Europa?",
+      "description": "Alăturați-vă miilor de pasageri mulțumiți care au încredere în Vital-Trans pentru nevoile lor de călătorie. Rezervați-vă călătoria astăzi și experimentați transportul confortabil!"
+    },
+    "bookTrip": "Rezervă-ți călătoria acum"
+  },
+
+  "FAQ": {
+    "headline": "Întrebări frecvente",
+    "description": "Găsiți răspunsuri la întrebările comune despre serviciile noastre de transport de pasageri și cum să vă faceți călătoria confortabilă și convenabilă.",
+    "questions": {
+      "routes": {
+        "question": "Ce rute operează Vital-Trans?",
+        "answer": "Vital-Trans operează rute de transport de pasageri care conectează orașele mari din Europa, cu un accent pe România, Germania, Franța, Italia, Spania și alte țări din UE. Oferim servicii regulate programate cu puncte de preluare și debarcare convenabile în centrele orașelor."
+      },
+      "booking": {
+        "question": "Cum pot rezerva un bilet cu Vital-Trans?",
+        "answer": "Rezervarea este simplă! Puteți rezerva locul prin sistemul nostru de rezervare online pe site-ul nostru, sunând la serviciul nostru pentru clienți sau vizitând una dintre agențiile noastre partenere. Vă recomandăm să rezervați în avans pentru a vă asigura data și locul preferat de călătorie."
+      },
+      "luggage": {
+        "question": "Care este alocația pentru bagaje?",
+        "answer": "Fiecare pasager poate aduce un bagaj mare (până la 30kg) și un bagaj de mână gratuit. Bagajele suplimentare pot fi transportate contra unei taxe mici, în funcție de spațiul disponibil. Vă rugăm să ne informați în avans dacă intenționați să călătoriți cu bagaje suplimentare."
+      },
+      "discounts": {
+        "question": "Oferiți reduceri pentru anumiți pasageri?",
+        "answer": "Da! Oferim reduceri speciale pentru copii (sub 12 ani), studenți cu legitimație valabilă, seniori (peste 65 de ani) și călători frecvenți. De asemenea, oferim reduceri pentru rezervări de grup pentru familii sau grupuri care călătoresc împreună. Contactați serviciul nostru pentru clienți pentru detalii."
+      },
+      "amenities": {
+        "question": "Ce facilități sunt disponibile în autobuzele dvs.?",
+        "answer": "Flota noastră modernă este echipată cu aer condiționat, scaune confortabile rabatabile, WiFi gratuit, porturi USB pentru încărcare și toalete la bord. În călătoriile mai lungi, facem opriri regulate la zone de servicii cu opțiuni de mâncare și băuturi."
+      },
+      "changes": {
+        "question": "Ce se întâmplă dacă trebuie să schimb sau să anulez rezervarea?",
+        "answer": "Puteți modifica sau anula rezervarea cu până la 48 de ore înainte de plecare cu taxe minime sau fără taxe, în funcție de tipul biletului. Modificările făcute cu mai puțin de 48 de ore înainte de plecare pot implica taxe suplimentare. Vă rugăm să contactați serviciul nostru pentru clienți pentru asistență cu modificările."
+      }
+    },
+    "cta": {
+      "title": "Aveți încă întrebări?",
+      "description": "Echipa noastră de servicii pentru clienți este gata să răspundă la orice întrebări pe care le aveți despre rutele, rezervările sau serviciile noastre. Contactați-ne astăzi pentru asistență personalizată!",
+      "button": "Contactați-ne sau Rezervați-vă călătoria"
+    }
+  },
+
+  "CallToActionSection": {
+    "headline": "Gata să călătoriți prin Europa?",
+    "description": "Rezervați-vă călătoria cu Vital-Trans astăzi și experimentați transportul confortabil, de încredere și accesibil în toată Europa. Lăsați-ne pe noi să ne ocupăm de nevoile dvs. de călătorie în timp ce vă bucurați de drum.",
+    "bookTrip": "Rezervă-ți călătoria acum",
+    "tagline": "Proces de rezervare ușor. Plăți sigure. Călătorie confortabilă garantată."
+  },
+
+  "Footer": {
+    "scrollToTop": "Derulează în sus",
+    "logoAlt": "Logo Vital-Trans",
+    "companyDescription": "Servicii profesionale de transport de pasageri în toată Europa. Călătorii sigure, confortabile și de încredere pentru toți călătorii!",
+    "contactUs": "Contactează-ne",
+    "contactInfo": {
+      "address": "București, România",
+      "phone": "+40 123 456 789",
+      "email": "info@vital-trans.com",
+      "hours": "Zilnic: 8:00 AM - 8:00 PM"
+    },
+    "socialLinks": {
+      "facebook": "Urmărește-ne pe Facebook",
+      "instagram": "Urmărește-ne pe Instagram"
+    },
+    "copyright": "Vital-Trans. Toate drepturile rezervate.",
+    "links": {
+      "terms": "Termeni și condiții",
+      "privacy": "Politica de confidențialitate"
+    }
   }
 }

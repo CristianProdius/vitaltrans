@@ -11,35 +11,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ButtonsCard } from "../ui/buttons";
 import { motion } from "framer-motion";
-
-const services = [
-  {
-    icon: <IconBus size={48} className="text-white" />,
-    title: "Modern Fleet",
-    description:
-      "Comfortable, well-maintained buses with amenities for a pleasant journey across Europe.",
-  },
-  {
-    icon: <IconMapPin size={48} className="text-white" />,
-    title: "Extensive Routes",
-    description:
-      "Regular connections between major European cities with convenient pickup and drop-off points.",
-  },
-  {
-    icon: <IconLanguage size={48} className="text-white" />,
-    title: "Multilingual Support",
-    description:
-      "Customer service in Romanian, English, and other European languages for all passengers.",
-  },
-  {
-    icon: <IconClock size={48} className="text-white" />,
-    title: "Reliable Schedules",
-    description:
-      "Punctual departures and arrivals with real-time updates for your peace of mind.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const ServicesOverview = () => {
+  const t = useTranslations("ServicesOverview");
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -67,6 +42,29 @@ const ServicesOverview = () => {
     },
   };
 
+  const services = [
+    {
+      icon: <IconBus size={48} className="text-white" />,
+      title: t("services.modernFleet.title"),
+      description: t("services.modernFleet.description"),
+    },
+    {
+      icon: <IconMapPin size={48} className="text-white" />,
+      title: t("services.extensiveRoutes.title"),
+      description: t("services.extensiveRoutes.description"),
+    },
+    {
+      icon: <IconLanguage size={48} className="text-white" />,
+      title: t("services.multilingualSupport.title"),
+      description: t("services.multilingualSupport.description"),
+    },
+    {
+      icon: <IconClock size={48} className="text-white" />,
+      title: t("services.reliableSchedules.title"),
+      description: t("services.reliableSchedules.description"),
+    },
+  ];
+
   return (
     <section
       id="services-section"
@@ -84,11 +82,10 @@ const ServicesOverview = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-extrabold text-[#1e3a8a] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
-            Our Services
+            {t("headline")}
           </h2>
           <p className="mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            At Vital-Trans, we offer reliable passenger transportation services
-            across Europe. Travel with comfort and confidence on every journey!
+            {t("description")}
           </p>
         </motion.div>
 
@@ -125,7 +122,7 @@ const ServicesOverview = () => {
                 className="mt-6 text-[#1e3a8a] hover:text-[#c8102e] font-semibold transition-all flex items-center"
               >
                 <span className="mr-1 group-hover:mr-2 transition-all">
-                  Learn More
+                  {t("learnMore")}
                 </span>
                 <span className="transform group-hover:translate-x-1 transition-transform">
                   →
@@ -146,12 +143,11 @@ const ServicesOverview = () => {
           <div className="absolute left-1/2 -translate-x-1/2 top-0 w-24 h-1 bg-gradient-to-r from-transparent via-[#1e3a8a] to-transparent"></div>
 
           <h3 className="text-2xl sm:text-3xl font-bold text-[#1e3a8a] mt-8">
-            Travel with Vital-Trans Today
+            {t("cta.title")}
           </h3>
 
           <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            With Vital-Trans, every journey is comfortable, reliable, and
-            affordable. Let&apos;s get you to your destination safely!
+            {t("cta.description")}
           </p>
 
           <motion.div
@@ -163,7 +159,7 @@ const ServicesOverview = () => {
               onClick={handleBookingClick}
               className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#c8102e] hover:to-[#1e3a8a] transition-all duration-300 text-lg font-medium tracking-wide"
             >
-              Book Your Trip Now
+              {t("bookTrip")}
             </ButtonsCard>
           </motion.div>
         </motion.div>

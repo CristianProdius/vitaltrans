@@ -10,35 +10,10 @@ import {
 } from "@tabler/icons-react";
 import { ButtonsCard } from "../ui/buttons";
 import { useRouter } from "next/navigation";
-
-const steps = [
-  {
-    icon: <IconCalendar size={48} className="text-white" />,
-    title: "Step 1: Choose Your Trip",
-    description:
-      "Select your departure, destination, date, and number of passengers through our easy booking system.",
-  },
-  {
-    icon: <IconTicket size={48} className="text-white" />,
-    title: "Step 2: Book Your Ticket",
-    description:
-      "Complete your personal details and payment information to secure your reservation instantly.",
-  },
-  {
-    icon: <IconMapPin size={48} className="text-white" />,
-    title: "Step 3: Receive Confirmation",
-    description:
-      "Get your e-ticket and travel details via email with pickup location and departure time.",
-  },
-  {
-    icon: <IconBus size={48} className="text-white" />,
-    title: "Step 4: Enjoy Your Journey",
-    description:
-      "Arrive at the pickup point, board our comfortable bus, and relax while we take you to your destination.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const HowItWorksSection = () => {
+  const t = useTranslations("HowItWorksSection");
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -66,6 +41,29 @@ const HowItWorksSection = () => {
     },
   };
 
+  const steps = [
+    {
+      icon: <IconCalendar size={48} className="text-white" />,
+      title: t("steps.choose.title"),
+      description: t("steps.choose.description"),
+    },
+    {
+      icon: <IconTicket size={48} className="text-white" />,
+      title: t("steps.book.title"),
+      description: t("steps.book.description"),
+    },
+    {
+      icon: <IconMapPin size={48} className="text-white" />,
+      title: t("steps.receive.title"),
+      description: t("steps.receive.description"),
+    },
+    {
+      icon: <IconBus size={48} className="text-white" />,
+      title: t("steps.enjoy.title"),
+      description: t("steps.enjoy.description"),
+    },
+  ];
+
   // Create a connector line between steps
   const StepConnector = ({ index }: { index: number }) => {
     if (index === steps.length - 1) return null;
@@ -92,11 +90,10 @@ const HowItWorksSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-extrabold text-[#1e3a8a] md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
-            How It Works
+            {t("headline")}
           </h2>
           <p className="mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Booking your journey with Vital-Trans is simple. Follow these four
-            steps to secure your comfortable travel experience across Europe.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -151,19 +148,15 @@ const HowItWorksSection = () => {
         >
           <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">
-              Ready to Travel Across Europe?
+              {t("cta.title")}
             </h3>
-            <p className="text-gray-700 mb-6">
-              Join thousands of satisfied passengers who trust Vital-Trans for
-              their travel needs. Book your journey today and experience
-              comfortable transportation!
-            </p>
+            <p className="text-gray-700 mb-6">{t("cta.description")}</p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <ButtonsCard
                 onClick={handleBookingClick}
                 className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:from-[#c8102e] hover:to-[#1e3a8a] transition-all duration-300 text-lg font-medium tracking-wide"
               >
-                Book Your Trip Now
+                {t("bookTrip")}
               </ButtonsCard>
             </motion.div>
           </div>

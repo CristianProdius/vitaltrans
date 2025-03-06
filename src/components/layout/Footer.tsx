@@ -13,8 +13,10 @@ import {
   IconClock,
   IconArrowUp,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("Footer");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -45,7 +47,7 @@ const Footer = () => {
         <button
           onClick={scrollToTop}
           className="bg-[#1e3a8a] text-white hover:bg-white hover:text-[#1e3a8a] border border-[#1e3a8a] w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300"
-          aria-label="Scroll to top"
+          aria-label={t("scrollToTop")}
         >
           <IconArrowUp size={24} />
         </button>
@@ -64,14 +66,13 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start mb-10 md:mb-0">
             <Image
               src="/logo.png" // Your logo path
-              alt="Vital-Trans Logo"
+              alt={t("logoAlt")}
               width={250}
               height={80}
               className="object-contain drop-shadow-md mb-6"
             />
             <p className="text-gray-300 max-w-md text-center md:text-left mb-6">
-              Professional passenger transportation services across Europe.
-              Safe, comfortable, and reliable journeys for all travelers!
+              {t("companyDescription")}
             </p>
             <div className="flex space-x-6">
               <Link
@@ -79,6 +80,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#c8102e] hover:text-white transition-all duration-300 transform hover:scale-110"
+                aria-label={t("socialLinks.facebook")}
               >
                 <IconBrandFacebook size={28} stroke={1.5} />
               </Link>
@@ -87,6 +89,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#c8102e] hover:text-white transition-all duration-300 transform hover:scale-110"
+                aria-label={t("socialLinks.instagram")}
               >
                 <IconBrandInstagram size={28} stroke={1.5} />
               </Link>
@@ -96,23 +99,23 @@ const Footer = () => {
           {/* Contact Information */}
           <div className="flex flex-col items-center md:items-end">
             <h3 className="text-xl font-bold text-[#c8102e] mb-6">
-              Contact Us
+              {t("contactUs")}
             </h3>
             <ul className="space-y-4">
               <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>Bucharest, Romania</span>
+                <span>{t("contactInfo.address")}</span>
                 <IconMapPin size={20} className="text-[#c8102e]" />
               </li>
               <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>+40 123 456 789</span>
+                <span>{t("contactInfo.phone")}</span>
                 <IconPhone size={20} className="text-[#c8102e]" />
               </li>
               <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>info@vital-trans.com</span>
+                <span>{t("contactInfo.email")}</span>
                 <IconMail size={20} className="text-[#c8102e]" />
               </li>
               <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>Daily: 8:00 AM - 8:00 PM</span>
+                <span>{t("contactInfo.hours")}</span>
                 <IconClock size={20} className="text-[#c8102e]" />
               </li>
             </ul>
@@ -124,20 +127,20 @@ const Footer = () => {
       <div className="bg-[#061636] py-4">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Vital-Trans. All rights reserved.
+            &copy; {new Date().getFullYear()} {t("copyright")}
           </p>
           <div className="flex gap-4 mt-3 md:mt-0">
             <Link
               href="/terms"
               className="text-gray-400 hover:text-white text-sm"
             >
-              Terms & Conditions
+              {t("links.terms")}
             </Link>
             <Link
               href="/privacy"
               className="text-gray-400 hover:text-white text-sm"
             >
-              Privacy Policy
+              {t("links.privacy")}
             </Link>
           </div>
         </div>

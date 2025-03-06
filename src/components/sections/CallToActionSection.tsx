@@ -4,8 +4,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ButtonsCard } from "../ui/buttons";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const CallToActionSection = () => {
+  const t = useTranslations("CallToActionSection");
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -48,7 +50,7 @@ const CallToActionSection = () => {
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Ready to Travel Across Europe?
+              {t("headline")}
             </motion.h2>
 
             <motion.p
@@ -57,10 +59,7 @@ const CallToActionSection = () => {
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Book your journey with Vital-Trans today and experience
-              comfortable, reliable, and affordable transportation across
-              Europe. Let us take care of your travel needs while you enjoy the
-              ride.
+              {t("description")}
             </motion.p>
 
             {/* CTA Button */}
@@ -76,7 +75,7 @@ const CallToActionSection = () => {
                 onClick={handleBookingClick}
                 className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] text-white px-10 py-5 rounded-full shadow-lg hover:shadow-xl hover:from-[#c8102e] hover:to-[#1e3a8a] transition-all duration-300 text-xl font-medium tracking-wide"
               >
-                Book Your Trip Now
+                {t("bookTrip")}
               </ButtonsCard>
             </motion.div>
 
@@ -86,8 +85,7 @@ const CallToActionSection = () => {
               animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              Easy booking process. Secure payments. Comfortable travel
-              guaranteed.
+              {t("tagline")}
             </motion.p>
           </div>
         </motion.div>

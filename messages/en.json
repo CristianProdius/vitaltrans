@@ -44,5 +44,214 @@
       "vienna": "Vienna",
       "amsterdam": "Amsterdam"
     }
+  },
+  "Problem": {
+    "headline": {
+      "part1": "Tired of Uncomfortable Travel,",
+      "part2": "Unpredictable Schedules & Limited Options?"
+    },
+    "intro": {
+      "description": "Vital-Trans is here to solve the biggest challenges passengers face when traveling across Europe. Let us handle your journey while you enjoy the ride!"
+    },
+    "challenges": {
+      "uncomfortable": {
+        "title": "Uncomfortable Travel",
+        "description": "Long journeys can be exhausting. We provide comfortable, modern buses with all amenities for a pleasant trip."
+      },
+      "unpredictable": {
+        "title": "Unpredictable Schedules",
+        "description": "Delays and cancellations ruin plans. Our reliable service ensures on-time departures and arrivals."
+      },
+      "limited": {
+        "title": "Limited Destinations",
+        "description": "Finding direct routes can be challenging. We connect multiple European cities with convenient schedules."
+      }
+    },
+    "solution": {
+      "title": "How Vital-Trans Helps You",
+      "description": "At Vital-Trans, we don't just transport passengers—we provide a complete travel experience with comfort, reliability, and convenience across Europe."
+    },
+    "button": {
+      "bookTrip": "Book Your Trip Now"
+    }
+  },
+
+  "ServicesOverview": {
+    "headline": "Our Services",
+    "description": "At Vital-Trans, we offer reliable passenger transportation services across Europe. Travel with comfort and confidence on every journey!",
+    "services": {
+      "modernFleet": {
+        "title": "Modern Fleet",
+        "description": "Comfortable, well-maintained buses with amenities for a pleasant journey across Europe."
+      },
+      "extensiveRoutes": {
+        "title": "Extensive Routes",
+        "description": "Regular connections between major European cities with convenient pickup and drop-off points."
+      },
+      "multilingualSupport": {
+        "title": "Multilingual Support",
+        "description": "Customer service in Romanian, English, and other European languages for all passengers."
+      },
+      "reliableSchedules": {
+        "title": "Reliable Schedules",
+        "description": "Punctual departures and arrivals with real-time updates for your peace of mind."
+      }
+    },
+    "learnMore": "Learn More",
+    "cta": {
+      "title": "Travel with Vital-Trans Today",
+      "description": "With Vital-Trans, every journey is comfortable, reliable, and affordable. Let's get you to your destination safely!"
+    },
+    "bookTrip": "Book Your Trip Now"
+  },
+
+  "BenefitsSection": {
+    "headline": "Why Travel with Us?",
+    "description": "At Vital-Trans, we don't just transport passengers—we provide a complete travel experience with comfort, reliability, and convenience across Europe.",
+    "benefits": {
+      "modernFleet": {
+        "title": "Modern Fleet",
+        "description": "Comfortable, well-maintained buses with air conditioning, WiFi, and ample luggage space for a pleasant journey."
+      },
+      "competitivePricing": {
+        "title": "Competitive Pricing",
+        "description": "Affordable fares with special discounts for students, children, and regular travelers. Group booking discounts available."
+      },
+      "multilingualStaff": {
+        "title": "Multilingual Staff",
+        "description": "Our staff speaks Romanian, English, and other European languages to assist all passengers with their needs."
+      },
+      "extensiveRoutes": {
+        "title": "Extensive Route Network",
+        "description": "Regular connections between major European cities with convenient pickup and drop-off points in city centers."
+      },
+      "reliableSchedules": {
+        "title": "Reliable Schedules",
+        "description": "Punctual departures and arrivals with real-time updates. We value your time and plan for efficient travel."
+      },
+      "easyBooking": {
+        "title": "Easy Online Booking",
+        "description": "Simple reservation system available 24/7, allowing you to book tickets from anywhere with instant confirmation."
+      }
+    },
+    "comparison": {
+      "title": "How We Compare to Other Transportation Options",
+      "others": {
+        "title": "Other Transportation",
+        "points": {
+          "1": "Higher costs for similar routes",
+          "2": "Unpredictable schedules and delays",
+          "3": "Limited luggage allowance",
+          "4": "Uncomfortable seating for long journeys",
+          "5": "Few or no onboard amenities",
+          "6": "Limited pickup and drop-off locations"
+        }
+      },
+      "vitalTrans": {
+        "title": "Vital-Trans",
+        "points": {
+          "1": "Competitive pricing with special discounts",
+          "2": "Reliable, punctual schedules",
+          "3": "Generous luggage allowance",
+          "4": "Comfortable seating with extra legroom",
+          "5": "Free WiFi, charging ports, and climate control",
+          "6": "Convenient city center pickup and drop-off points"
+        }
+      },
+      "footer": "Choose the transportation service that prioritizes your comfort and convenience"
+    }
+  },
+
+  "HowItWorksSection": {
+    "headline": "How It Works",
+    "description": "Booking your journey with Vital-Trans is simple. Follow these four steps to secure your comfortable travel experience across Europe.",
+    "steps": {
+      "choose": {
+        "title": "Step 1: Choose Your Trip",
+        "description": "Select your departure, destination, date, and number of passengers through our easy booking system."
+      },
+      "book": {
+        "title": "Step 2: Book Your Ticket",
+        "description": "Complete your personal details and payment information to secure your reservation instantly."
+      },
+      "receive": {
+        "title": "Step 3: Receive Confirmation",
+        "description": "Get your e-ticket and travel details via email with pickup location and departure time."
+      },
+      "enjoy": {
+        "title": "Step 4: Enjoy Your Journey",
+        "description": "Arrive at the pickup point, board our comfortable bus, and relax while we take you to your destination."
+      }
+    },
+    "cta": {
+      "title": "Ready to Travel Across Europe?",
+      "description": "Join thousands of satisfied passengers who trust Vital-Trans for their travel needs. Book your journey today and experience comfortable transportation!"
+    },
+    "bookTrip": "Book Your Trip Now"
+  },
+
+  "FAQ": {
+    "headline": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our passenger transportation services and how to make your journey comfortable and convenient.",
+    "questions": {
+      "routes": {
+        "question": "What routes does Vital-Trans operate?",
+        "answer": "Vital-Trans operates passenger transportation routes connecting major cities across Europe, with a focus on Romania, Germany, France, Italy, Spain, and other EU countries. We offer regular scheduled services with convenient pickup and drop-off points in city centers."
+      },
+      "booking": {
+        "question": "How can I book a ticket with Vital-Trans?",
+        "answer": "Booking is simple! You can reserve your seat through our online booking system on our website, by calling our customer service, or visiting one of our partner agencies. We recommend booking in advance to secure your preferred travel date and seat."
+      },
+      "luggage": {
+        "question": "What is the luggage allowance?",
+        "answer": "Each passenger can bring one large suitcase (up to 30kg) and one piece of hand luggage free of charge. Additional luggage may be transported for a small fee, subject to available space. Please inform us in advance if you plan to travel with extra luggage."
+      },
+      "discounts": {
+        "question": "Do you offer discounts for certain passengers?",
+        "answer": "Yes! We offer special discounts for children (under 12), students with valid ID, seniors (over 65), and regular travelers. We also provide group booking discounts for families or groups traveling together. Contact our customer service for details."
+      },
+      "amenities": {
+        "question": "What amenities are available on your buses?",
+        "answer": "Our modern fleet is equipped with air conditioning, comfortable reclining seats, free WiFi, USB charging ports, and onboard restrooms. On longer journeys, we make regular comfort stops at service areas with food and refreshment options."
+      },
+      "changes": {
+        "question": "What happens if I need to change or cancel my booking?",
+        "answer": "You can modify or cancel your reservation up to 48 hours before departure with minimal or no fees, depending on your ticket type. Changes made less than 48 hours before departure may incur additional charges. Please contact our customer service for assistance with changes."
+      }
+    },
+    "cta": {
+      "title": "Still Have Questions?",
+      "description": "Our customer service team is ready to answer any questions you might have about our routes, bookings, or services. Get in touch today for personalized assistance!",
+      "button": "Contact Us or Book Your Trip"
+    }
+  },
+
+  "CallToActionSection": {
+    "headline": "Ready to Travel Across Europe?",
+    "description": "Book your journey with Vital-Trans today and experience comfortable, reliable, and affordable transportation across Europe. Let us take care of your travel needs while you enjoy the ride.",
+    "bookTrip": "Book Your Trip Now",
+    "tagline": "Easy booking process. Secure payments. Comfortable travel guaranteed."
+  },
+
+  "Footer": {
+    "scrollToTop": "Scroll to top",
+    "logoAlt": "Vital-Trans Logo",
+    "companyDescription": "Professional passenger transportation services across Europe. Safe, comfortable, and reliable journeys for all travelers!",
+    "contactUs": "Contact Us",
+    "contactInfo": {
+      "address": "Bucharest, Romania",
+      "phone": "+40 123 456 789",
+      "email": "info@vital-trans.com",
+      "hours": "Daily: 8:00 AM - 8:00 PM"
+    },
+    "socialLinks": {
+      "facebook": "Follow us on Facebook",
+      "instagram": "Follow us on Instagram"
+    },
+    "copyright": "Vital-Trans. All rights reserved.",
+    "links": {
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy"
+    }
   }
 }

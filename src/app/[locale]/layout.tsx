@@ -10,7 +10,7 @@ type LocaleLayoutProps = {
 
 export default async function LocaleLayout(props: LocaleLayoutProps) {
   const { children, params } = props;
-  const { locale } = await params;
+  const { locale } = params;
   // Use type assertion with string literal union
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
@@ -19,12 +19,10 @@ export default async function LocaleLayout(props: LocaleLayoutProps) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <html lang={locale}>
+        <body>{children}</body>
+      </html>
+    </NextIntlClientProvider>
   );
 }
