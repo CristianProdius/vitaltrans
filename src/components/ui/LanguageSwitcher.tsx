@@ -18,6 +18,7 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   const pathname = usePathname();
   const router = useRouter();
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const languages: Language[] = [
@@ -40,6 +41,15 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   function handleLanguageChange(code: string): void {
     router.replace(pathname, { locale: code });
     setIsLangMenuOpen(false);
@@ -52,9 +62,9 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
       <button
         onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
         className={`flex items-center space-x-1 text-sm font-medium px-3 py-1 rounded-md transition-colors ${
-          pathname === "/contact"
-            ? " text-black "
-            : " text-white hover:bg-gray-800"
+          isScrolled || pathname === "/contact"
+            ? "text-[#1e3a8a]"
+            : "text-white"
         }`}
       >
         <IconLanguage size={18} />

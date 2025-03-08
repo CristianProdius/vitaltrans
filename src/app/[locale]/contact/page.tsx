@@ -11,8 +11,11 @@ import {
   IconClock,
 } from "@tabler/icons-react";
 import Header from "@/components/layout/Header";
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+  const t = useTranslations("Contact");
+
   return (
     <>
       <Header />
@@ -27,12 +30,12 @@ const Contact = () => {
             <div className="text-left">
               <TextGenerateEffect
                 className="text-4xl font-extrabold tracking-tight text-[#1e3a8a] md:text-5xl lg:text-6xl"
-                words="Get in Touch with Vital-Trans"
+                words={t("headline")}
               />
 
               <TextGenerateEffect
                 className="mt-6 text-lg text-gray-600 md:text-xl max-w-3xl"
-                words="Have questions about our transportation services? Ready to book your journey? Fill out the form and our team will get back to you within 24 hours."
+                words={t("description")}
               />
 
               {/* Contact Information */}
@@ -42,8 +45,10 @@ const Contact = () => {
                     <IconPhone className="h-5 w-5 text-white" />
                   </div>
                   <div className="ml-4 text-gray-700">
-                    <p className="text-sm font-medium">Call Us</p>
-                    <p className="mt-1">+40 123 456 789</p>
+                    <p className="text-sm font-medium">
+                      {t("contactInfo.call.title")}
+                    </p>
+                    <p className="mt-1">{t("contactInfo.call.value")}</p>
                   </div>
                 </div>
 
@@ -52,8 +57,10 @@ const Contact = () => {
                     <IconMail className="h-5 w-5 text-white" />
                   </div>
                   <div className="ml-4 text-gray-700">
-                    <p className="text-sm font-medium">Email Us</p>
-                    <p className="mt-1">info@vital-trans.com</p>
+                    <p className="text-sm font-medium">
+                      {t("contactInfo.email.title")}
+                    </p>
+                    <p className="mt-1">{t("contactInfo.email.value")}</p>
                   </div>
                 </div>
 
@@ -62,8 +69,10 @@ const Contact = () => {
                     <IconMapPin className="h-5 w-5 text-white" />
                   </div>
                   <div className="ml-4 text-gray-700">
-                    <p className="text-sm font-medium">Our Location</p>
-                    <p className="mt-1">Bucharest, Romania</p>
+                    <p className="text-sm font-medium">
+                      {t("contactInfo.location.title")}
+                    </p>
+                    <p className="mt-1">{t("contactInfo.location.value")}</p>
                   </div>
                 </div>
               </div>
@@ -72,30 +81,30 @@ const Contact = () => {
               <div className="mt-10 p-6 border border-[#1e3a8a] rounded-lg bg-white shadow-md">
                 <h3 className="text-xl font-semibold text-[#1e3a8a] flex items-center">
                   <IconClock className="mr-2" />
-                  Business Hours
+                  {t("businessHours.title")}
                 </h3>
                 <div className="mt-4 grid grid-cols-2 gap-2 text-gray-700">
-                  <div>Monday - Friday:</div>
-                  <div>8:00 AM - 8:00 PM</div>
-                  <div>Saturday:</div>
-                  <div>9:00 AM - 6:00 PM</div>
-                  <div>Sunday:</div>
-                  <div>10:00 AM - 4:00 PM</div>
+                  <div>{t("businessHours.weekdays.day")}:</div>
+                  <div>{t("businessHours.weekdays.hours")}</div>
+                  <div>{t("businessHours.saturday.day")}:</div>
+                  <div>{t("businessHours.saturday.hours")}</div>
+                  <div>{t("businessHours.sunday.day")}:</div>
+                  <div>{t("businessHours.sunday.hours")}</div>
                 </div>
               </div>
 
               {/* Popular Routes */}
               <div className="mt-6 p-6 border border-[#c8102e] rounded-lg bg-white shadow-md">
                 <h3 className="text-xl font-semibold text-[#c8102e]">
-                  Popular Routes
+                  {t("popularRoutes.title")}
                 </h3>
                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
-                  <div>Romania → Germany</div>
-                  <div>Romania → Italy</div>
-                  <div>Romania → Spain</div>
-                  <div>Romania → France</div>
-                  <div>Romania → UK</div>
-                  <div>Romania → Netherlands</div>
+                  <div>{t("popularRoutes.routes.germany")}</div>
+                  <div>{t("popularRoutes.routes.italy")}</div>
+                  <div>{t("popularRoutes.routes.spain")}</div>
+                  <div>{t("popularRoutes.routes.france")}</div>
+                  <div>{t("popularRoutes.routes.uk")}</div>
+                  <div>{t("popularRoutes.routes.netherlands")}</div>
                 </div>
               </div>
             </div>
@@ -103,7 +112,7 @@ const Contact = () => {
             {/* Right Column - Contact Form */}
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
               <h2 className="text-2xl font-bold text-[#1e3a8a] mb-6">
-                Book Your Trip or Send Us a Message
+                {t("form.title")}
               </h2>
               <ContactForm />
             </div>

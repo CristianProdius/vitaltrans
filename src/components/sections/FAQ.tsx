@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { ButtonsCard } from "../ui/buttons";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl"; // Import useLocale from next-intl
 
 interface FAQItemProps {
   question: string;
@@ -90,6 +90,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
 
 const FAQ = () => {
   const t = useTranslations("FAQ");
+  const locale = useLocale(); // Get the current locale
   const [openIndex, setOpenIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const headerRef = useRef(null);
@@ -128,7 +129,7 @@ const FAQ = () => {
 
   // Function to handle the "Book Your Trip" button click
   const handleBookingClick = () => {
-    router.push("/contact"); // Navigate to the contact page
+    router.push(`/${locale}/contact`); // Navigate to the contact page with the current locale
   };
 
   const fadeIn = {

@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Road Rangers",
+  title: "Vital Trans",
   description:
-    "RoadRanger – The dispatch partner that works for you! With us, every mile means more money in your pocket! 💰",
+    "Trasnport sigur si rapid in toata tara. Rezerva acum un loc in autobuzul nostru!",
 };
 
 export default function RootLayout({

@@ -6,13 +6,14 @@ import Link from "next/link";
 
 import { ButtonsCard } from "@/components/ui/buttons";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
-import { useTranslations } from "next-intl"; // Import from next-intl
+import { useTranslations, useLocale } from "next-intl"; // Import useLocale from next-intl
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const t = useTranslations("Header"); // Use the namespace 'Header'
+  const locale = useLocale(); // Get the current locale
 
   // Handle scroll effect
   useEffect(() => {
@@ -51,7 +52,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <LanguageSwitcher className="text-white hover:bg-white/10" />
+            <LanguageSwitcher />
 
             <ButtonsCard
               className={`${
@@ -61,7 +62,7 @@ const Header = () => {
               } transition-all shadow-md px-5 py-2 text-sm`}
               onClick={() => {
                 console.log("Contact Clicked");
-                window.location.href = "/contact";
+                window.location.href = `/${locale}/contact`;
               }}
             >
               {t("contact")}
@@ -71,9 +72,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             {/* Mobile Language Selector */}
-            <LanguageSwitcher
-              className={`${isScrolled ? "text-gray-800" : "text-white"}`}
-            />
+            <LanguageSwitcher />
 
             <button
               type="button"
@@ -141,7 +140,7 @@ const Header = () => {
               onClick={() => {
                 console.log("Contact Clicked");
                 setIsMenuOpen(false);
-                window.location.href = "/contact";
+                window.location.href = `/${locale}/contact`;
               }}
             >
               {t("contact")}

@@ -6,6 +6,8 @@
   },
 
   "Hero": {
+    "bookNow": "Book Now",
+    "goToCheckout": "Go to Checkout",
     "backgroundAlt": "Bus transportation",
     "companyName": "Vital-Trans",
     "tagline": "Safe and comfortable passenger transportation across Europe!",
@@ -252,6 +254,54 @@
     "links": {
       "terms": "Terms & Conditions",
       "privacy": "Privacy Policy"
+    }
+  },
+
+  "Contact": {
+    "headline": "Get in Touch with Vital-Trans",
+    "description": "Have questions about our transportation services? Ready to book your journey? Fill out the form and our team will get back to you within 24 hours.",
+    "contactInfo": {
+      "call": {
+        "title": "Call Us",
+        "value": "+40 123 456 789"
+      },
+      "email": {
+        "title": "Email Us",
+        "value": "info@vital-trans.com"
+      },
+      "location": {
+        "title": "Our Location",
+        "value": "Bucharest, Romania"
+      }
+    },
+    "businessHours": {
+      "title": "Business Hours",
+      "weekdays": {
+        "day": "Monday - Friday",
+        "hours": "8:00 AM - 8:00 PM"
+      },
+      "saturday": {
+        "day": "Saturday",
+        "hours": "9:00 AM - 6:00 PM"
+      },
+      "sunday": {
+        "day": "Sunday",
+        "hours": "10:00 AM - 4:00 PM"
+      }
+    },
+    "popularRoutes": {
+      "title": "Popular Routes",
+      "routes": {
+        "germany": "Romania → Germany",
+        "italy": "Romania → Italy",
+        "spain": "Romania → Spain",
+        "france": "Romania → France",
+        "uk": "Romania → UK",
+        "netherlands": "Romania → Netherlands"
+      }
+    },
+    "form": {
+      "title": "Book Your Trip or Send Us a Message"
     }
   }
 }

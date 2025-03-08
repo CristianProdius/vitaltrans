@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ButtonsCard } from "../ui/buttons";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl"; // Import useLocale from next-intl
 
 const CallToActionSection = () => {
   const t = useTranslations("CallToActionSection");
   const router = useRouter();
+  const locale = useLocale(); // Get the current locale
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,7 +18,7 @@ const CallToActionSection = () => {
 
   // Function to handle the "Book Your Trip Now" button click
   const handleBookingClick = () => {
-    router.push("/contact"); // Navigate to the contact page
+    router.push(`/${locale}/contact`); // Navigate to the contact page with the current locale
   };
 
   const fadeIn = {

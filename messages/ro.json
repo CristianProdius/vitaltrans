@@ -6,6 +6,8 @@
   },
 
   "Hero": {
+    "bookNow": "Rezervă acum",
+    "goToCheckout": "Cumpara Acum",
     "backgroundAlt": "Transport cu autobuzul",
     "companyName": "Vital-Trans",
     "tagline": "Transport sigur și confortabil de pasageri în toată Europa!",
@@ -35,7 +37,7 @@
     "bookingInquiry": "Cerere de rezervare",
     "bookingDetails": "Vă rugăm să găsiți detaliile rezervării mele atașate.",
     "cities": {
-      "bucharest": "București",
+      "bucharest": "Chisianu",
       "berlin": "Berlin",
       "paris": "Paris",
       "rome": "Roma",
@@ -252,6 +254,54 @@
     "links": {
       "terms": "Termeni și condiții",
       "privacy": "Politica de confidențialitate"
+    }
+  },
+
+  "Contact": {
+    "headline": "Contactați Vital-Trans",
+    "description": "Aveți întrebări despre serviciile noastre de transport? Sunteți gata să vă rezervați călătoria? Completați formularul și echipa noastră vă va răspunde în termen de 24 de ore.",
+    "contactInfo": {
+      "call": {
+        "title": "Sunați-ne",
+        "value": "+40 123 456 789"
+      },
+      "email": {
+        "title": "Trimiteți-ne un email",
+        "value": "info@vital-trans.com"
+      },
+      "location": {
+        "title": "Locația noastră",
+        "value": "București, România"
+      }
+    },
+    "businessHours": {
+      "title": "Program de lucru",
+      "weekdays": {
+        "day": "Luni - Vineri",
+        "hours": "8:00 AM - 8:00 PM"
+      },
+      "saturday": {
+        "day": "Sâmbătă",
+        "hours": "9:00 AM - 6:00 PM"
+      },
+      "sunday": {
+        "day": "Duminică",
+        "hours": "10:00 AM - 4:00 PM"
+      }
+    },
+    "popularRoutes": {
+      "title": "Rute populare",
+      "routes": {
+        "germany": "România → Germania",
+        "italy": "România → Italia",
+        "spain": "România → Spania",
+        "france": "România → Franța",
+        "uk": "România → Marea Britanie",
+        "netherlands": "România → Olanda"
+      }
+    },
+    "form": {
+      "title": "Rezervați-vă călătoria sau trimiteți-ne un mesaj"
     }
   }
 }
