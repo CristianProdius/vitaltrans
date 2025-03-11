@@ -1,16 +1,16 @@
 {
   "Header": {
-    "logoAlt": "Logo Vital-Trans",
+    "logoAlt": "Logo ConstanțaChişinău RutăRegulată",
     "contact": "Contact",
     "openMenu": "Deschide meniul principal"
   },
 
   "Hero": {
     "bookNow": "Rezervă acum",
-    "goToCheckout": "Cumpara Acum",
-    "backgroundAlt": "Transport cu autobuzul",
-    "companyName": "Vital-Trans",
-    "tagline": "Transport sigur și confortabil de pasageri în toată Europa!",
+    "goToCheckout": "Cumpără Acum",
+    "backgroundAlt": "Transport cu autocarul",
+    "companyName": "SrlDoga VitalTrans & Anatol Tours",
+    "tagline": "De la 🚌Constanța -Brăila-Galaț-Cahul-Liova-Cimiṣlia-Hinceṣti-Chiṣinău",
     "contactUs": "Contactează-ne",
     "ourRoutes": "Rutele noastre",
     "yearsExperience": "Ani de experiență",
@@ -37,14 +37,14 @@
     "bookingInquiry": "Cerere de rezervare",
     "bookingDetails": "Vă rugăm să găsiți detaliile rezervării mele atașate.",
     "cities": {
-      "bucharest": "Chisianu",
-      "berlin": "Berlin",
-      "paris": "Paris",
-      "rome": "Roma",
-      "london": "Londra",
-      "madrid": "Madrid",
-      "vienna": "Viena",
-      "amsterdam": "Amsterdam"
+      "bucharest": "Constanța ",
+      "berlin": "Brăila",
+      "paris": "Galaț",
+      "rome": "Cahul",
+      "london": "Liova",
+      "madrid": "Cimiṣlia",
+      "vienna": "Hinceṣti",
+      "amsterdam": "Chiṣinău"
     }
   },
   "Problem": {
@@ -53,12 +53,12 @@
       "part2": "orare imprevizibile și opțiuni limitate?"
     },
     "intro": {
-      "description": "Vital-Trans este aici pentru a rezolva cele mai mari provocări pe care le întâmpină pasagerii atunci când călătoresc prin Europa. Lăsați-ne pe noi să ne ocupăm de călătoria dvs. în timp ce vă bucurați de drum!"
+      "description": "ConstanțaChişinău RutăRegulată este aici pentru a rezolva cele mai mari provocări pe care le întâmpină pasagerii atunci când călătoresc prin Europa. Lăsați-ne pe noi să ne ocupăm de călătoria dvs. în timp ce vă bucurați de drum!"
     },
     "challenges": {
       "uncomfortable": {
         "title": "Călătorii incomode",
-        "description": "Călătoriile lungi pot fi obositoare. Oferim autobuze moderne și confortabile cu toate facilitățile pentru o călătorie plăcută."
+        "description": "Călătoriile lungi pot fi obositoare. Oferim autocare moderne și confortabile cu toate facilitățile pentru o călătorie plăcută."
       },
       "unpredictable": {
         "title": "Orare imprevizibile",
@@ -70,8 +70,8 @@
       }
     },
     "solution": {
-      "title": "Cum vă ajută Vital-Trans",
-      "description": "La Vital-Trans, nu doar transportăm pasageri - oferim o experiență completă de călătorie cu confort, fiabilitate și conveniență în toată Europa."
+      "title": "Cum vă ajută ConstanțaChişinău RutăRegulată",
+      "description": "La ConstanțaChişinău RutăRegulată, nu doar transportăm pasageri - oferim o experiență completă de călătorie cu confort, fiabilitate și conveniență în toată Europa."
     },
     "button": {
       "bookTrip": "Rezervă-ți călătoria acum"
@@ -80,11 +80,11 @@
 
   "ServicesOverview": {
     "headline": "Serviciile noastre",
-    "description": "La Vital-Trans, oferim servicii de transport de pasageri de încredere în toată Europa. Călătoriți cu confort și încredere la fiecare drum!",
+    "description": "La ConstanțaChişinău RutăRegulată, oferim servicii de transport de pasageri de încredere în toată Europa. Călătoriți cu confort și încredere la fiecare drum!",
     "services": {
       "modernFleet": {
         "title": "Flotă modernă",
-        "description": "Autobuze confortabile și bine întreținute, cu facilități pentru o călătorie plăcută în toată Europa."
+        "description": "Autocare confortabile și bine întreținute, cu facilități pentru o călătorie plăcută în toată Europa."
       },
       "extensiveRoutes": {
         "title": "Rute extinse",
@@ -101,19 +101,19 @@
     },
     "learnMore": "Află mai multe",
     "cta": {
-      "title": "Călătorește cu Vital-Trans astăzi",
-      "description": "Cu Vital-Trans, fiecare călătorie este confortabilă, de încredere și accesibilă. Să vă ducem în siguranță la destinație!"
+      "title": "Călătorește cu ConstanțaChişinău RutăRegulată astăzi",
+      "description": "Cu ConstanțaChişinău RutăRegulată, fiecare călătorie este confortabilă, de încredere și accesibilă. Să vă ducem în siguranță la destinație!"
     },
     "bookTrip": "Rezervă-ți călătoria acum"
   },
 
   "BenefitsSection": {
     "headline": "De ce să călătoriți cu noi?",
-    "description": "La Vital-Trans, nu doar transportăm pasageri - oferim o experiență completă de călătorie cu confort, fiabilitate și conveniență în toată Europa.",
+    "description": "La ConstanțaChişinău RutăRegulată, nu doar transportăm pasageri - oferim o experiență completă de călătorie cu confort, fiabilitate și conveniență în toată Europa.",
     "benefits": {
       "modernFleet": {
         "title": "Flotă modernă",
-        "description": "Autobuze confortabile și bine întreținute, cu aer condiționat, WiFi și spațiu generos pentru bagaje pentru o călătorie plăcută."
+        "description": "Autocare confortabile și bine întreținute, cu aer condiționat, WiFi și spațiu generos pentru bagaje pentru o călătorie plăcută."
       },
       "competitivePricing": {
         "title": "Prețuri competitive",
@@ -150,7 +150,7 @@
         }
       },
       "vitalTrans": {
-        "title": "Vital-Trans",
+        "title": "ConstanțaChişinău RutăRegulată",
         "points": {
           "1": "Prețuri competitive cu reduceri speciale",
           "2": "Orare de încredere și punctuale",
@@ -292,12 +292,12 @@
     "popularRoutes": {
       "title": "Rute populare",
       "routes": {
-        "germany": "România → Germania",
-        "italy": "România → Italia",
-        "spain": "România → Spania",
-        "france": "România → Franța",
-        "uk": "România → Marea Britanie",
-        "netherlands": "România → Olanda"
+        "germany": "Constanța → Brăila",
+        "italy": "Brăila → Galați",
+        "spain": "Galați → Cahul",
+        "france": "Cahul → Liova",
+        "uk": "Liova → Cimișlia",
+        "netherlands": "Cimișlia → Hincești → Chișinău"
       }
     },
     "form": {
