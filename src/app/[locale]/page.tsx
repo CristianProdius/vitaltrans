@@ -51,7 +51,7 @@
  */
 
 import Hero from "@/components/sections/Hero";
-import Problem from "@/components/sections/Problem";
+import Discounts from "@/components/sections/Discounts";
 import ServicesOverview from "@/components/sections/ServicesOverview";
 import BenefitsSection from "@/components/sections/BenefitsSection";
 //import Testimonials from "@/components/sections/Testimonials";
@@ -66,11 +66,12 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <Problem />
+      <HowItWorksSection />
+      <Discounts />
       <ServicesOverview />
       <BenefitsSection />
       {/*<Testimonials />*/}
-      <HowItWorksSection />
+
       <FAQ />
       <CallToActionSection />
       <Footer />

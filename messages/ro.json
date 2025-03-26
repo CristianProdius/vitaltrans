@@ -6,11 +6,11 @@
   },
 
   "Hero": {
-    "bookNow": "Rezervă acum",
-    "goToCheckout": "Cumpără Acum",
+    "bookNow": "Rezervă Biliet",
+    "goToCheckout": "Cumpără Bilet",
     "backgroundAlt": "Transport cu autocarul",
-    "companyName": "SrlDoga VitalTrans & Anatol Tours",
-    "tagline": "De la 🚌Constanța -Brăila-Galaț-Cahul-Liova-Cimiṣlia-Hinceṣti-Chiṣinău",
+    "companyName": "SrlDoga VitalTrans ",
+    "tagline": "Rute spre Romania",
     "contactUs": "Contactează-ne",
     "ourRoutes": "Rutele noastre",
     "yearsExperience": "Ani de experiență",
@@ -47,53 +47,56 @@
       "amsterdam": "Chiṣinău"
     }
   },
-  "Problem": {
-    "headline": {
-      "part1": "Sătul de călătorii incomode,",
-      "part2": "orare imprevizibile și opțiuni limitate?"
+  "Discounts": {
+    "headline": "Profitați de reducerile noastre!",
+    "intro": "Călătoriți confortabil și avantajos cu aceste oferte speciale.",
+    "imageAlt": "Promoții speciale",
+    "callToAction": {
+      "title": "Călătoriți inteligent și economisiți!",
+      "description": "Rezervați-vă locurile și bucurați-vă de reduceri substanțiale la următoarea dumneavoastră călătorie.",
+      "button": "Rezervă acum"
     },
-    "intro": {
-      "description": "ConstanțaChişinău RutăRegulată este aici pentru a rezolva cele mai mari provocări pe care le întâmpină pasagerii atunci când călătoresc prin Europa. Lăsați-ne pe noi să ne ocupăm de călătoria dvs. în timp ce vă bucurați de drum!"
-    },
-    "challenges": {
-      "uncomfortable": {
-        "title": "Călătorii incomode",
-        "description": "Călătoriile lungi pot fi obositoare. Oferim autocare moderne și confortabile cu toate facilitățile pentru o călătorie plăcută."
+    "discounts": {
+      "students": {
+        "title": "Studenții",
+        "description": "10% reducere"
       },
-      "unpredictable": {
-        "title": "Orare imprevizibile",
-        "description": "Întârzierile și anulările vă pot strica planurile. Serviciul nostru de încredere asigură plecări și sosiri la timp."
+      "elevi": {
+        "title": "Elevi",
+        "description": "10% reducere"
       },
-      "limited": {
-        "title": "Destinații limitate",
-        "description": "Găsirea rutelor directe poate fi o provocare. Conectăm mai multe orașe europene cu orare convenabile."
+      "copii": {
+        "title": "Copii (1-10 ani)",
+        "description": "50% reducere"
+      },
+      "pensionari": {
+        "title": "Pensionarii",
+        "description": "10% reducere"
+      },
+      "calatorie6": {
+        "title": "A 6-a călătorie",
+        "description": "50% reducere"
+      },
+      "calatorie10": {
+        "title": "A 10-a călătorie",
+        "description": "Gratis"
       }
-    },
-    "solution": {
-      "title": "Cum vă ajută ConstanțaChişinău RutăRegulată",
-      "description": "La ConstanțaChişinău RutăRegulată, nu doar transportăm pasageri - oferim o experiență completă de călătorie cu confort, fiabilitate și conveniență în toată Europa."
-    },
-    "button": {
-      "bookTrip": "Rezervă-ți călătoria acum"
     }
   },
 
   "ServicesOverview": {
     "headline": "Serviciile noastre",
-    "description": "La ConstanțaChişinău RutăRegulată, oferim servicii de transport de pasageri de încredere în toată Europa. Călătoriți cu confort și încredere la fiecare drum!",
+    "description": "La ConstanțaChişinău RutăRegulată, oferim servicii de transport de pasageri de încredere în toată Romania. Călătoriți cu confort și încredere la fiecare drum!",
     "services": {
       "modernFleet": {
         "title": "Flotă modernă",
-        "description": "Autocare confortabile și bine întreținute, cu facilități pentru o călătorie plăcută în toată Europa."
+        "description": "Autocare confortabile și bine întreținute, cu facilități pentru o călătorie plăcută în toată Romania."
       },
       "extensiveRoutes": {
         "title": "Rute extinse",
         "description": "Conexiuni regulate între orașele mari europene cu puncte de preluare și debarcare convenabile."
       },
-      "multilingualSupport": {
-        "title": "Suport multilingv",
-        "description": "Serviciu pentru clienți în română, engleză și alte limbi europene pentru toți pasagerii."
-      },
+
       "reliableSchedules": {
         "title": "Orare de încredere",
         "description": "Plecări și sosiri punctuale cu actualizări în timp real pentru liniștea dvs."
@@ -109,7 +112,7 @@
 
   "BenefitsSection": {
     "headline": "De ce să călătoriți cu noi?",
-    "description": "La ConstanțaChişinău RutăRegulată, nu doar transportăm pasageri - oferim o experiență completă de călătorie cu confort, fiabilitate și conveniență în toată Europa.",
+    "description": "La ConstanțaChişinău RutăRegulată, nu doar transportăm pasageri - oferim o experiență completă de călătorie cu confort, fiabilitate și conveniență în toată Romania.",
     "benefits": {
       "modernFleet": {
         "title": "Flotă modernă",
@@ -166,7 +169,7 @@
 
   "HowItWorksSection": {
     "headline": "Cum funcționează",
-    "description": "Rezervarea călătoriei dvs. cu Vital-Trans este simplă. Urmați acești patru pași pentru a vă asigura o experiență de călătorie confortabilă în toată Europa.",
+    "description": "Rezervarea călătoriei dvs. cu Vital-Trans este simplă. Urmați acești patru pași pentru a vă asigura o experiență de călătorie confortabilă în toată Romania.",
     "steps": {
       "choose": {
         "title": "Pasul 1: Alegeți călătoria",
@@ -186,7 +189,7 @@
       }
     },
     "cta": {
-      "title": "Gata să călătoriți prin Europa?",
+      "title": "Gata să călătoriți prin Romania?",
       "description": "Alăturați-vă miilor de pasageri mulțumiți care au încredere în Vital-Trans pentru nevoile lor de călătorie. Rezervați-vă călătoria astăzi și experimentați transportul confortabil!"
     },
     "bookTrip": "Rezervă-ți călătoria acum"
@@ -198,16 +201,13 @@
     "questions": {
       "routes": {
         "question": "Ce rute operează Vital-Trans?",
-        "answer": "Vital-Trans operează rute de transport de pasageri care conectează orașele mari din Europa, cu un accent pe România, Germania, Franța, Italia, Spania și alte țări din UE. Oferim servicii regulate programate cu puncte de preluare și debarcare convenabile în centrele orașelor."
+        "answer": "Vital-Trans operează rute de transport de pasageri care conectează orașele mari din Romania, cu un accent pe România, Germania, Franța, Italia, Spania și alte țări din UE. Oferim servicii regulate programate cu puncte de preluare și debarcare convenabile în centrele orașelor."
       },
       "booking": {
         "question": "Cum pot rezerva un bilet cu Vital-Trans?",
         "answer": "Rezervarea este simplă! Puteți rezerva locul prin sistemul nostru de rezervare online pe site-ul nostru, sunând la serviciul nostru pentru clienți sau vizitând una dintre agențiile noastre partenere. Vă recomandăm să rezervați în avans pentru a vă asigura data și locul preferat de călătorie."
       },
-      "luggage": {
-        "question": "Care este alocația pentru bagaje?",
-        "answer": "Fiecare pasager poate aduce un bagaj mare (până la 30kg) și un bagaj de mână gratuit. Bagajele suplimentare pot fi transportate contra unei taxe mici, în funcție de spațiul disponibil. Vă rugăm să ne informați în avans dacă intenționați să călătoriți cu bagaje suplimentare."
-      },
+
       "discounts": {
         "question": "Oferiți reduceri pentru anumiți pasageri?",
         "answer": "Da! Oferim reduceri speciale pentru copii (sub 12 ani), studenți cu legitimație valabilă, seniori (peste 65 de ani) și călători frecvenți. De asemenea, oferim reduceri pentru rezervări de grup pentru familii sau grupuri care călătoresc împreună. Contactați serviciul nostru pentru clienți pentru detalii."
@@ -229,8 +229,8 @@
   },
 
   "CallToActionSection": {
-    "headline": "Gata să călătoriți prin Europa?",
-    "description": "Rezervați-vă călătoria cu Vital-Trans astăzi și experimentați transportul confortabil, de încredere și accesibil în toată Europa. Lăsați-ne pe noi să ne ocupăm de nevoile dvs. de călătorie în timp ce vă bucurați de drum.",
+    "headline": "Gata să călătoriți prin Romania?",
+    "description": "Rezervați-vă călătoria cu Vital-Trans astăzi și experimentați transportul confortabil, de încredere și accesibil în toată Romania. Lăsați-ne pe noi să ne ocupăm de nevoile dvs. de călătorie în timp ce vă bucurați de drum.",
     "bookTrip": "Rezervă-ți călătoria acum",
     "tagline": "Proces de rezervare ușor. Plăți sigure. Călătorie confortabilă garantată."
   },
@@ -238,11 +238,11 @@
   "Footer": {
     "scrollToTop": "Derulează în sus",
     "logoAlt": "Logo Vital-Trans",
-    "companyDescription": "Servicii profesionale de transport de pasageri în toată Europa. Călătorii sigure, confortabile și de încredere pentru toți călătorii!",
+    "companyDescription": "Servicii profesionale de transport de pasageri în toată Romania. Călătorii sigure, confortabile și de încredere pentru toți călătorii!",
     "contactUs": "Contactează-ne",
     "contactInfo": {
       "address": "București, România",
-      "phone": "+40 123 456 789",
+      "phone": "+373 7 606 14 66",
       "email": "info@vital-trans.com",
       "hours": "Zilnic: 8:00 AM - 8:00 PM"
     },
@@ -263,7 +263,7 @@
     "contactInfo": {
       "call": {
         "title": "Sunați-ne",
-        "value": "+40 123 456 789"
+        "value": "+373 7 606 14 66"
       },
       "email": {
         "title": "Trimiteți-ne un email",

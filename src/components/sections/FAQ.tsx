@@ -109,10 +109,7 @@ const FAQ = () => {
       question: t("questions.booking.question"),
       answer: t("questions.booking.answer"),
     },
-    {
-      question: t("questions.luggage.question"),
-      answer: t("questions.luggage.answer"),
-    },
+
     {
       question: t("questions.discounts.question"),
       answer: t("questions.discounts.answer"),

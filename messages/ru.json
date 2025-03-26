@@ -242,7 +242,7 @@
     "contactUs": "Свяжитесь с нами",
     "contactInfo": {
       "address": "Бухарест, Румыния",
-      "phone": "+40 123 456 789",
+      "phone": "+373 7 606 14 66",
       "email": "info@vital-trans.com",
       "hours": "Ежедневно: 8:00 - 20:00"
     },
@@ -263,7 +263,7 @@
     "contactInfo": {
       "call": {
         "title": "Позвоните нам",
-        "value": "+40 123 456 789"
+        "value": "+373 7 606 14 66"
       },
       "email": {
         "title": "Напишите нам",

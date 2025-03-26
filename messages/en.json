@@ -242,7 +242,7 @@
     "contactUs": "Contact Us",
     "contactInfo": {
       "address": "Bucharest, Romania",
-      "phone": "+40 123 456 789",
+      "phone": "+373 7 606 14 66",
       "email": "info@vital-trans.com",
       "hours": "Daily: 8:00 AM - 8:00 PM"
     },
@@ -263,7 +263,7 @@
     "contactInfo": {
       "call": {
         "title": "Call Us",
-        "value": "+40 123 456 789"
+        "value": "+373 7 606 14 66"
       },
       "email": {
         "title": "Email Us",
