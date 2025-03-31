@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { sendEmail } from "@/lib/send-email";
 
-const heroForm = () => {
+const HeroForm = () => {
   const t = useTranslations("Hero");
   const [formData, setFormData] = useState({
     departure: "",
@@ -382,4 +382,4 @@ const heroForm = () => {
   );
 };
 
-export default heroForm;
+export default HeroForm;
