@@ -6,7 +6,7 @@ import { ButtonsCard } from "../ui/buttons";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import React from "react";
-import HeroForm from "./HeroForm";
+import HeroForm from "./HeroFormm";
 
 const Hero = () => {
   const t = useTranslations("Hero");
