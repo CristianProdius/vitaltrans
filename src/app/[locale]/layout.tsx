@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import ContactWidget from "@/components/ui/ContactWidget";
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
@@ -21,7 +22,10 @@ export default async function LocaleLayout(props: LocaleLayoutProps) {
   return (
     <NextIntlClientProvider messages={messages}>
       <html lang={locale}>
-        <body>{children}</body>
+        <body>
+          {children}
+          <ContactWidget />
+        </body>
       </html>
     </NextIntlClientProvider>
   );
