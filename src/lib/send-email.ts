@@ -1,6 +1,6 @@
-import { FormData } from "@/components/ui/ContactForm";
+import type { BookingFormData } from "@/components/sections/HeroFormm";
 
-export function sendEmail(data: FormData) {
+export function sendEmail(data: BookingFormData) {
   const apiEndpoint = "/api/email";
 
   fetch(apiEndpoint, {

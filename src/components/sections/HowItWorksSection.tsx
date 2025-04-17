@@ -9,13 +9,14 @@ import {
   IconMapPin,
 } from "@tabler/icons-react";
 import { ButtonsCard } from "../ui/buttons";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 const HowItWorksSection = () => {
   const t = useTranslations("HowItWorksSection");
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
+  const { locale } = useParams();
 
   useEffect(() => {
     setIsVisible(true);
@@ -23,7 +24,7 @@ const HowItWorksSection = () => {
 
   // Function to handle the "Book Your Trip Now" button click
   const handleBookingClick = () => {
-    router.push("/contact"); // Navigate to the contact page
+    router.push(`/${locale}/contact`); // Navigate to the contact page
   };
 
   // Framer Motion variants

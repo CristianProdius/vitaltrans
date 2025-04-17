@@ -123,14 +123,7 @@ const ServicesOverview = () => {
                 <Link
                   href="/services"
                   className="mt-4 text-[#1e3a8a] hover:text-[#c8102e] font-semibold transition-all flex items-center"
-                >
-                  <span className="mr-1 group-hover:mr-2 transition-all">
-                    {t("learnMore")}
-                  </span>
-                  <span className="transform group-hover:translate-x-1 transition-transform">
-                    →
-                  </span>
-                </Link>
+                ></Link>
               </motion.div>
             ))}
           </motion.div>

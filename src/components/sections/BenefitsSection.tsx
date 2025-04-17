@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import {
   IconBus,
   IconDiscount2,
-  IconMapPin,
   IconClock,
   IconDeviceMobile,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const BenefitsSection = () => {
   const t = useTranslations("BenefitsSection");
@@ -33,14 +33,17 @@ const BenefitsSection = () => {
     },
   };
 
-  const compareVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7, delay: 0.3 },
-    },
-  };
+  const buses = [
+    { src: "/images/bus1.png", alt: "Autobuz Vital Trans #1" },
+    { src: "/images/bus2.png", alt: "Autobuz Vital Trans #2" },
+    { src: "/images/bus3.png", alt: "Autobuz Vital Trans #3" },
+    { src: "/images/bus4.png", alt: "Autobuz Vital Trans #4" },
+    { src: "/images/bus5.png", alt: "Autobuz Vital Trans #1" },
+    { src: "/images/bus6.png", alt: "Autobuz Vital Trans #2" },
+    { src: "/images/bus7.png", alt: "Autobuz Vital Trans #3" },
+    { src: "/images/bus8.png", alt: "Autobuz Vital Trans #4" },
+    { src: "/images/bus9.png", alt: "Autobuz Vital Trans #4" },
+  ];
 
   const benefits = [
     {
@@ -53,11 +56,7 @@ const BenefitsSection = () => {
       title: t("benefits.competitivePricing.title"),
       description: t("benefits.competitivePricing.description"),
     },
-    {
-      icon: <IconMapPin size={48} className="text-white" />,
-      title: t("benefits.extensiveRoutes.title"),
-      description: t("benefits.extensiveRoutes.description"),
-    },
+
     {
       icon: <IconClock size={48} className="text-white" />,
       title: t("benefits.reliableSchedules.title"),
@@ -108,7 +107,7 @@ const BenefitsSection = () => {
 
           {/* Benefits Grid */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             variants={staggerChildren}
@@ -139,62 +138,47 @@ const BenefitsSection = () => {
             ))}
           </motion.div>
 
-          {/* Comparison Section */}
+          {/* Gallery Section */}
           <motion.div
             className="mt-16 rounded-2xl shadow-sm hover:shadow-md border border-gray-100 overflow-hidden transition-shadow duration-300"
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
-            variants={compareVariants}
+            variants={fadeIn}
+            transition={{ duration: 0.8 }}
           >
-            {/* Comparison Header */}
-            <div className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] p-6 sm:p-8">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white text-center">
-                {t("comparison.title")}
+            {/* Gallery Header */}
+            <div className="bg-gradient-to-r from-[#1e3a8a] to-[#c8102e] p-6 text-center">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                {t("gallery.title")}
               </h3>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-              {/* Other Transportation */}
-              <div className="bg-gray-50 p-6 sm:p-8 border-r border-gray-200">
-                <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                  <span className="w-8 h-8 inline-flex items-center justify-center bg-gray-200 rounded-full mr-3 text-gray-700 text-sm font-bold">
-                    VS
-                  </span>
-                  {t("comparison.others.title")}
-                </h4>
-                <ul className="space-y-4 text-gray-600">
-                  {[1, 2, 3, 4, 5, 6].map((item, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="text-red-500 mr-2">✕</span>
-                      <span>{t(`comparison.others.points.${item}`)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Vital-Trans */}
-              <div className="bg-white p-6 sm:p-8">
-                <h4 className="text-xl font-bold text-[#1e3a8a] mb-6 flex items-center">
-                  <span className="w-8 h-8 inline-flex items-center justify-center bg-gradient-to-br from-[#1e3a8a] to-[#c8102e] rounded-full mr-3 text-white text-sm font-bold">
-                    VT
-                  </span>
-                  {t("comparison.vitalTrans.title")}
-                </h4>
-                <ul className="space-y-4 text-gray-700">
-                  {[1, 2, 3, 4, 5, 6].map((item, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span>{t(`comparison.vitalTrans.points.${item}`)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Image Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-6 bg-white">
+              {buses.map((bus, idx) => (
+                <motion.div
+                  key={idx}
+                  className="relative w-full pb-[75%] overflow-hidden rounded-xl shadow hover:shadow-lg cursor-pointer"
+                  variants={fadeIn}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  whileHover={{ scale: 1.03 }}
+                >
+                  {/* 
+         pb-[75%] gives a 4:3 box (75% padding-bottom).
+         Switch to pb-[56.25%] for 16:9, pb-[100%] for 1:1, etc. 
+       */}
+                  <Image
+                    src={bus.src}
+                    alt={bus.alt}
+                    fill
+                    className="object-cover"
+                  />
+                </motion.div>
+              ))}
             </div>
-
-            {/* Comparison Footer */}
+            {/* Optional Footer */}
             <div className="bg-gradient-to-r from-[#1e3a8a]/10 to-[#c8102e]/10 p-4 text-center">
               <p className="text-[#1e3a8a] font-medium">
-                {t("comparison.footer")}
+                {t("gallery.footer")}
               </p>
             </div>
           </motion.div>

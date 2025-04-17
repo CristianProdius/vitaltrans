@@ -2,10 +2,34 @@ import React from "react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { sendEmail } from "@/lib/send-email";
+type HeroFormProps = {
+  className?: string;
+};
 
-const HeroForm = () => {
+export interface BookingFormData {
+  departure: string;
+  arrival: string;
+  date: string;
+  adults: number;
+  children: number;
+  students: number;
+  name: string;
+  phone: string;
+  email: string;
+  termsAccepted: boolean;
+  subject: string;
+  message: string;
+  travelType: string[];
+  passengers: {
+    adults: number;
+    children: number;
+    students: number;
+  };
+}
+
+const HeroForm: React.FC<HeroFormProps> = ({ className = "" }) => {
   const t = useTranslations("Hero");
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<BookingFormData>({
     departure: "",
     arrival: "",
     date: "",
@@ -19,18 +43,18 @@ const HeroForm = () => {
     subject: "",
     message: "",
     travelType: [],
-    passengers: 0,
+    passengers: { adults: 0, children: 0, students: 0 },
   });
 
   const cityOptions = [
-    { value: "bucharest", label: t("cities.bucharest") },
-    { value: "berlin", label: t("cities.berlin") },
-    { value: "paris", label: t("cities.paris") },
-    { value: "rome", label: t("cities.rome") },
-    { value: "london", label: t("cities.london") },
-    { value: "madrid", label: t("cities.madrid") },
-    { value: "vienna", label: t("cities.vienna") },
-    { value: "amsterdam", label: t("cities.amsterdam") },
+    { value: "constanta", label: t("cities.Constanța") },
+    { value: "braila", label: t("cities.Brăila") },
+    { value: "galat", label: t("cities.Galaț") },
+    { value: "cahul", label: t("cities.Cahul") },
+    { value: "liova", label: t("cities.Liova") },
+    { value: "cimislia", label: t("cities.Cimiṣlia") },
+    { value: "hincesti", label: t("cities.Hinceṣti") },
+    { value: "chisinau", label: t("cities.Chiṣinău") },
     // ... add more as needed
   ];
 
@@ -78,7 +102,7 @@ const HeroForm = () => {
   };
 
   return (
-    <div className="w-full lg:w-1/2 lg:pl-8">
+    <div className={className}>
       <div className="bg-white rounded-lg shadow-xl p-6 md:p-8">
         <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
           {t("bookYourTrip")}
@@ -345,28 +369,6 @@ const HeroForm = () => {
               className="w-full rounded-md border border-gray-300 bg-white py-1 px-2 text-gray-800 focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
               required
             />
-          </div>
-
-          {/* Terms and Conditions */}
-          <div className="flex items-start">
-            <input
-              type="checkbox"
-              id="termsAccepted"
-              name="termsAccepted"
-              checked={formData.termsAccepted}
-              onChange={handleInputChange}
-              className="h-4 w-4 rounded border-gray-300 text-[#1e3a8a] focus:ring-[#1e3a8a] mt-1"
-              required
-            />
-            <label
-              htmlFor="termsAccepted"
-              className="ml-2 text-sm text-gray-700"
-            >
-              {t("termsText")}{" "}
-              <a href="#" className="text-[#1e3a8a] hover:underline">
-                {t("termsLink")}
-              </a>
-            </label>
           </div>
 
           {/* Submit Button */}

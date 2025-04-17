@@ -1,19 +1,34 @@
-import { type NextRequest, NextResponse } from "next/server";
+// app/api/email/route.ts
+
+import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
+import { google } from "googleapis";
+import SMTPTransport from "nodemailer/lib/smtp-transport";
 
-// Combined type that can handle both form types
+// —————— OAuth2 Client Setup ——————
+const OAuth2 = google.auth.OAuth2;
+const oauth2Client = new OAuth2(
+  process.env.GOOGLE_CLIENT_ID!,
+  process.env.GOOGLE_CLIENT_SECRET!,
+  "https://developers.google.com/oauthplayground"
+);
+oauth2Client.setCredentials({
+  refresh_token: process.env.GOOGLE_REFRESH_TOKEN!,
+});
+
+// —————— Form Data Type ——————
 type CombinedFormData = {
   name: string;
-  email: string;
+  email: string; // visitor’s email
   phone: string;
   subject: string;
   message: string;
 
-  // Fields from original contact form
+  // contact form only
   category?: string[];
 
-  // Fields from hero booking form
+  // booking form only
   travelType?: string[];
   departure?: string;
   arrival?: string;
@@ -26,58 +41,51 @@ type CombinedFormData = {
 };
 
 export async function POST(request: NextRequest) {
-  const data: CombinedFormData = await request.json();
-  const {
-    email,
-    name,
-    phone,
-    subject,
-    message,
-    category,
-    travelType,
-    departure,
-    arrival,
-    date,
-    passengers,
-  } = data;
+  try {
+    const data: CombinedFormData = await request.json();
+    const {
+      email: visitorEmail,
+      name,
+      phone,
+      subject,
+      message,
+      category,
+      travelType,
+      departure,
+      arrival,
+      date,
+      passengers,
+    } = data;
 
-  const transport = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.MY_EMAIL,
-      pass: process.env.MY_PASSWORD,
-    },
-  });
+    // 1) Figure out form type
+    const isBookingForm = Boolean(departure && arrival);
 
-  // Determine if this is a booking form or contact form
-  const isBookingForm = departure && arrival;
+    // 2) Prepare any array fields
+    const categoryString =
+      category && Array.isArray(category)
+        ? category.join(", ")
+        : category || "";
+    const travelTypeString =
+      travelType && Array.isArray(travelType)
+        ? travelType.join(", ")
+        : travelType || "";
 
-  // Format the categories or travel types as a comma-separated string
-  const categoryString =
-    category && Array.isArray(category) ? category.join(", ") : category || "";
+    // 3) Build text + HTML bodies
+    let emailBody = "";
+    let htmlBody = "";
 
-  const travelTypeString =
-    travelType && Array.isArray(travelType)
-      ? travelType.join(", ")
-      : travelType || "";
+    if (isBookingForm) {
+      const passengersInfo = passengers
+        ? `Adults: ${passengers.adults || 0}, Children: ${
+            passengers.children || 0
+          }, Students: ${passengers.students || 0}`
+        : "Not specified";
 
-  // Create a formatted email body based on form type
-  let emailBody = "";
-  let htmlBody = "";
-
-  if (isBookingForm) {
-    // Booking form email
-    const passengersInfo = passengers
-      ? `Adults: ${passengers.adults || 0}, Children: ${
-          passengers.children || 0
-        }, Students: ${passengers.students || 0}`
-      : "Not specified";
-
-    emailBody = `
+      emailBody = `
 BOOKING REQUEST
 
 Name: ${name}
-Email: ${email}
+Email: ${visitorEmail}
 Phone: ${phone || "Not provided"}
 Travel Type: ${travelTypeString || "Not specified"}
 
@@ -91,89 +99,94 @@ Subject: ${subject}
 
 Additional Information:
 ${message || "None provided"}
-    `;
+      `;
 
-    htmlBody = `
-      <h2>New Booking Request</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-      <p><strong>Travel Type:</strong> ${
-        travelTypeString || "Not specified"
-      }</p>
-      
-      <h3>Route Details:</h3>
-      <p><strong>Departure:</strong> ${departure}</p>
-      <p><strong>Arrival:</strong> ${arrival}</p>
-      <p><strong>Date:</strong> ${date}</p>
-      <p><strong>Passengers:</strong> ${passengersInfo}</p>
-      
-      <p><strong>Subject:</strong> ${subject}</p>
-      
-      <h3>Additional Information:</h3>
-      <p>${message ? message.replace(/\n/g, "<br>") : "None provided"}</p>
-    `;
-  } else {
-    // Regular contact form email
-    emailBody = `
+      htmlBody = `
+<h2>New Booking Request</h2>
+<p><strong>Name:</strong> ${name}</p>
+<p><strong>Email:</strong> ${visitorEmail}</p>
+<p><strong>Phone:</strong> ${phone || "Not provided"}</p>
+<p><strong>Travel Type:</strong> ${travelTypeString || "Not specified"}</p>
+
+<h3>Route Details:</h3>
+<ul>
+  <li><strong>Departure:</strong> ${departure}</li>
+  <li><strong>Arrival:</strong> ${arrival}</li>
+  <li><strong>Date:</strong> ${date}</li>
+  <li><strong>Passengers:</strong> ${passengersInfo}</li>
+</ul>
+
+<p><strong>Subject:</strong> ${subject}</p>
+
+<h3>Additional Information:</h3>
+<p>${message ? message.replace(/\n/g, "<br>") : "None provided"}</p>
+      `;
+    } else {
+      emailBody = `
 CONTACT FORM SUBMISSION
 
 Name: ${name}
-Email: ${email}
+Email: ${visitorEmail}
 Phone: ${phone || "Not provided"}
 Category: ${categoryString || "None selected"}
 Subject: ${subject}
 
 Message:
 ${message}
-    `;
+      `;
 
-    htmlBody = `
-      <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-      <p><strong>Category:</strong> ${categoryString || "None selected"}</p>
-      <p><strong>Subject:</strong> ${subject}</p>
-      <h3>Message:</h3>
-      <p>${message.replace(/\n/g, "<br>")}</p>
-    `;
-  }
+      htmlBody = `
+<h2>New Contact Form Submission</h2>
+<p><strong>Name:</strong> ${name}</p>
+<p><strong>Email:</strong> ${visitorEmail}</p>
+<p><strong>Phone:</strong> ${phone || "Not provided"}</p>
+<p><strong>Category:</strong> ${categoryString || "None selected"}</p>
+<p><strong>Subject:</strong> ${subject}</p>
+<h3>Message:</h3>
+<p>${message.replace(/\n/g, "<br>")}</p>
+      `;
+    }
 
-  const mailOptions: Mail.Options = {
-    from: process.env.MY_EMAIL,
-    to: process.env.MY_EMAIL,
-    // cc: email, (uncomment this line if you want to send a copy to the sender)
-    subject: isBookingForm
-      ? `Booking Request: ${departure} to ${arrival} from ${name}`
-      : `Contact Form: ${subject} from ${name}`,
-    text: emailBody,
-    html: htmlBody,
-  };
+    // 4) Mint a fresh access token
+    const { token: accessToken } = await oauth2Client.getAccessToken();
 
-  const sendMailPromise = () =>
-    new Promise<string>((resolve, reject) => {
-      transport.sendMail(mailOptions, function (err) {
-        if (!err) {
-          resolve(
-            isBookingForm
-              ? "Booking request submitted successfully! We'll contact you shortly to confirm your reservation."
-              : "Email sent successfully! We'll get back to you soon."
-          );
-        } else {
-          reject(err.message);
-        }
-      });
+    // 5) Create the Gmail transporter
+    const transport = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        type: "OAuth2",
+        user: process.env.MY_EMAIL,
+        clientId: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
+        accessToken,
+      },
+    } as SMTPTransport.Options);
+
+    // 6) Mail options
+    const mailOptions: Mail.Options = {
+      from: process.env.MY_EMAIL,
+      cc: visitorEmail, // visitor gets a copy
+      bcc: "autocarconstanta@gmail.com", // BCC to the main email
+      subject: isBookingForm
+        ? `Booking Request: ${departure} → ${arrival} from ${name}`
+        : `Contact Form: ${subject} from ${name}`,
+      text: emailBody,
+      html: htmlBody,
+    };
+
+    // 7) Send!
+    await transport.sendMail(mailOptions);
+
+    return NextResponse.json({
+      message: isBookingForm
+        ? "Booking request submitted successfully! We’ll be in touch soon."
+        : "Email sent successfully! We’ll reply shortly.",
     });
-
-  try {
-    const result = await sendMailPromise();
-    return NextResponse.json({ message: result });
-  } catch (err) {
+  } catch (err: unknown) {
     console.error("Email sending failed:", err);
-    return NextResponse.json(
-      { error: "Failed to send email" },
-      { status: 500 }
-    );
+    const errorMessage =
+      err instanceof Error ? err.message : "Failed to send email";
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }

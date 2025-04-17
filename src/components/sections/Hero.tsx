@@ -73,7 +73,7 @@ const Hero = () => {
           </div>
         </div>
         {/* Right side - Booking Form */}
-        {showForm ? <HeroForm /> : null}
+        {showForm ? <HeroForm className="w-full lg:w-1/2 lg:pl-8" /> : null}
       </div>
     </section>
   );

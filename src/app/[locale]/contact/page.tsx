@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import ContactForm from "@/components/ui/ContactForm";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import Footer from "@/components/layout/Footer";
 import {
@@ -12,6 +11,7 @@ import {
 } from "@tabler/icons-react";
 import Header from "@/components/layout/Header";
 import { useTranslations } from "next-intl";
+import HeroFormm from "@/components/sections/HeroFormm";
 
 const Contact = () => {
   const t = useTranslations("Contact");
@@ -24,6 +24,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100"></div>
 
         {/* Content */}
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
@@ -110,12 +111,8 @@ const Contact = () => {
             </div>
 
             {/* Right Column - Contact Form */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-              <h2 className="text-2xl font-bold text-[#1e3a8a] mb-6">
-                {t("form.title")}
-              </h2>
-              <ContactForm />
-            </div>
+
+            <HeroFormm className="w-full lg:px-0 lg:pl-8" />
           </div>
         </div>
       </section>
