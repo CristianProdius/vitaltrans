@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { IconBus, IconMapPin, IconClock } from "@tabler/icons-react";
+import { IconBus, IconMapPin } from "@tabler/icons-react";
+import { GrShieldSecurity } from "react-icons/gr";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ButtonsCard } from "../ui/buttons";
@@ -50,7 +51,7 @@ const ServicesOverview = () => {
       description: t("services.extensiveRoutes.description"),
     },
     {
-      icon: <IconClock size={48} className="text-white" />,
+      icon: <GrShieldSecurity size={48} className="text-white" />,
       title: t("services.reliableSchedules.title"),
       description: t("services.reliableSchedules.description"),
     },

@@ -2,12 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  IconBus,
-  IconDiscount2,
-  IconClock,
-  IconDeviceMobile,
-} from "@tabler/icons-react";
+import { IconBus, IconDiscount2, IconDeviceMobile } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -47,18 +42,13 @@ const BenefitsSection = () => {
 
   const benefits = [
     {
-      icon: <IconBus size={48} className="text-white" />,
-      title: t("benefits.modernFleet.title"),
-      description: t("benefits.modernFleet.description"),
-    },
-    {
       icon: <IconDiscount2 size={48} className="text-white" />,
       title: t("benefits.competitivePricing.title"),
       description: t("benefits.competitivePricing.description"),
     },
 
     {
-      icon: <IconClock size={48} className="text-white" />,
+      icon: <IconBus size={48} className="text-white" />,
       title: t("benefits.reliableSchedules.title"),
       description: t("benefits.reliableSchedules.description"),
     },
@@ -107,7 +97,7 @@ const BenefitsSection = () => {
 
           {/* Benefits Grid */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             variants={staggerChildren}
