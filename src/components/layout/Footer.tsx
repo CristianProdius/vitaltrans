@@ -16,23 +16,6 @@ import { useTranslations } from "next-intl";
 
 const Footer = () => {
   const t = useTranslations("Footer");
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <footer className="relative bg-[#0a1e4a] text-white">
