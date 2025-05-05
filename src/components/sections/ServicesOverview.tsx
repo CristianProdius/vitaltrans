@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { IconBus, IconMapPin } from "@tabler/icons-react";
 import { GrShieldSecurity } from "react-icons/gr";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { ButtonsCard } from "../ui/buttons";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
@@ -13,6 +13,7 @@ const ServicesOverview = () => {
   const t = useTranslations("ServicesOverview");
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
+  const { locale } = useParams();
 
   useEffect(() => {
     setIsVisible(true);
@@ -20,7 +21,7 @@ const ServicesOverview = () => {
 
   // Function to handle the "Book Your Trip" button click
   const handleBookingClick = () => {
-    router.push("/contact"); // Navigate to the contact page
+    router.push(`/${locale}/contact`); // Navigate to the contact page
   };
 
   // Framer Motion variants

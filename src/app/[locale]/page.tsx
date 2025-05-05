@@ -8,7 +8,6 @@ import HowItWorksSection from "@/components/sections/HowItWorksSection";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import ContactWidget from "@/components/ui/ContactWidget";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
       <BenefitsSection />
 
       <Footer />
-      <ContactWidget />
     </main>
   );
 }

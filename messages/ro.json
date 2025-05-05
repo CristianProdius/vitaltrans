@@ -173,13 +173,14 @@
   "Footer": {
     "scrollToTop": "Derulează în sus",
     "logoAlt": "Logo Vital-Trans",
-    "companyDescription": "Servicii profesionale de transport de pasageri. Călătorii sigure, confortabile și de încredere pentru toți călătorii!",
+    "companyDescription": "Servicii profesionale de transport pasageri. Călătorii sigure, confortabile și de încredere pentru toți călătorii!",
     "contactUs": "Contactează-ne",
     "contactInfo": {
-      "address": "Moldova, România",
-      "phone": "+373 7 606 14 66",
+      "addressTitle": "Adresă",
+      "address": "str. Ion Pruncul 12 of. 14, mun. Chișinău",
+      "phone": "+373 76 06 14 66",
       "email": "autocarconstanta@gmail.com",
-      "hours": "Zilnic: 8:00 AM - 8:00 PM"
+      "hours": "Zilnic 09:00 - 21:00"
     },
     "socialLinks": {
       "facebook": "Urmărește-ne pe Facebook",

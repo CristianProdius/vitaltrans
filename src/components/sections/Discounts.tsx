@@ -11,7 +11,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { ButtonsCard } from "../ui/buttons";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 const Discounts = () => {
@@ -19,6 +19,7 @@ const Discounts = () => {
   const t = useTranslations("Discounts");
 
   const [isVisible, setIsVisible] = useState(false);
+  const { locale } = useParams();
 
   useEffect(() => {
     setIsVisible(true);
@@ -26,7 +27,7 @@ const Discounts = () => {
 
   // Redirect on CTA
   const handleBookingClick = () => {
-    router.push("/contact");
+    router.push(`/${locale}/contact`); // Navigate to the contact page
   };
 
   // Framer Motion variants

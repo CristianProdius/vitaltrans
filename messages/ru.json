@@ -173,17 +173,18 @@
   "Footer": {
     "scrollToTop": "Прокрутить вверх",
     "logoAlt": "Логотип Vital-Trans",
-    "companyDescription": "Профессиональные услуги пассажирских перевозок. Безопасные, комфортные и надежные поездки для всех пассажиров!",
+    "companyDescription": "Профессиональные услуги пассажирских перевозок. Безопасные, комфортные и надежные поездки для всех путешественников!",
     "contactUs": "Свяжитесь с нами",
     "contactInfo": {
-      "address": "Молдова, Румыния",
-      "phone": "+373 7 606 14 66",
+      "addressTitle": "Адрес",
+      "address": "ул. Ион Прункул 12 оф. 14, мун. Кишинев",
+      "phone": "+373 76 06 14 66",
       "email": "autocarconstanta@gmail.com",
-      "hours": "Ежедневно: 8:00 - 20:00"
+      "hours": "Ежедневно 09:00 - 21:00"
     },
     "socialLinks": {
-      "facebook": "Следите за нами в Facebook",
-      "instagram": "Следите за нами в Instagram"
+      "facebook": "Следите за нами на Facebook",
+      "instagram": "Следите за нами на Instagram"
     },
     "copyright": "Vital-Trans. Все права защищены.",
     "links": {

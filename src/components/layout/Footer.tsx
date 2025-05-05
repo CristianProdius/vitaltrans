@@ -37,90 +37,81 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-[#0a1e4a] text-white">
-      {/* Scroll to top button */}
-      <motion.div
-        className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-      >
-        <button
-          onClick={scrollToTop}
-          className="bg-[#1e3a8a] text-white hover:bg-white hover:text-[#1e3a8a] border border-[#1e3a8a] w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300"
-          aria-label={t("scrollToTop")}
-        >
-          <IconArrowUp size={24} />
-        </button>
-      </motion.div>
-
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto py-16 px-6 lg:px-20">
-        <motion.div
-          className="flex flex-col md:flex-row justify-between items-center"
-          initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
-          variants={fadeIn}
-          transition={{ duration: 0.5 }}
-        >
+      <div className="max-w-7xl mx-auto py-12 px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Logo Section */}
-          <div className="flex flex-col items-center md:items-start mb-10 md:mb-0">
-            <Image
-              src="/logo.png" // Your logo path
-              alt={t("logoAlt")}
-              width={250}
-              height={80}
-              className="object-contain drop-shadow-md mb-6"
-            />
-            <p className="text-gray-300 max-w-md text-center md:text-left mb-6">
-              {t("companyDescription")}
-            </p>
+          <div className="flex flex-col">
+            <div className="mb-8">
+              <Image
+                src="/logo.png"
+                alt={t("logoAlt")}
+                width={280}
+                height={80}
+                className="object-contain"
+              />
+            </div>
+            <p className="text-gray-200 mb-8">{t("companyDescription")}</p>
             <div className="flex space-x-6">
               <Link
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#c8102e] hover:text-white transition-all duration-300 transform hover:scale-110"
+                className="text-[#c8102e]"
                 aria-label={t("socialLinks.facebook")}
               >
-                <IconBrandFacebook size={28} stroke={1.5} />
+                <IconBrandFacebook size={24} />
               </Link>
               <Link
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#c8102e] hover:text-white transition-all duration-300 transform hover:scale-110"
+                className="text-[#c8102e]"
                 aria-label={t("socialLinks.instagram")}
               >
-                <IconBrandInstagram size={28} stroke={1.5} />
+                <IconBrandInstagram size={24} />
               </Link>
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div className="flex flex-col items-center md:items-end">
-            <h3 className="text-xl font-bold text-[#c8102e] mb-6">
-              {t("contactUs")}
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>{t("contactInfo.address")}</span>
-                <IconMapPin size={20} className="text-[#c8102e]" />
-              </li>
-              <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>{t("contactInfo.phone")}</span>
-                <IconPhone size={20} className="text-[#c8102e]" />
-              </li>
-              <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>{t("contactInfo.email")}</span>
-                <IconMail size={20} className="text-[#c8102e]" />
-              </li>
-              <li className="flex items-center justify-end gap-3 text-gray-300 hover:text-white transition-colors">
-                <span>{t("contactInfo.hours")}</span>
-                <IconClock size={20} className="text-[#c8102e]" />
-              </li>
-            </ul>
+          {/* Address Section */}
+          <div className="flex flex-col">
+            <h3 className="text-xl font-bold text-[#c8102e] mb-6">Adresa</h3>
+            <div className="flex items-center gap-3 text-gray-200 mb-4">
+              <IconMapPin size={20} className="text-[#c8102e] flex-shrink-0" />
+              <span>str. Ion Pruncul 12 of. 14, mun. Chișinău</span>
+            </div>
+            <div className="flex items-center gap-3 text-gray-200">
+              <IconClock size={20} className="text-[#c8102e] flex-shrink-0" />
+              <span>Zilnic 09:00 - 21:00</span>
+            </div>
           </div>
-        </motion.div>
+
+          {/* Contact Information */}
+          <div className="flex flex-col">
+            <h3 className="text-xl font-bold text-[#c8102e] mb-6">
+              Contact us
+            </h3>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 text-gray-200">
+                <IconPhone size={20} className="text-[#c8102e] flex-shrink-0" />
+                <span>+373 76 06 14 66</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-200">
+                <IconPhone size={20} className="text-[#c8102e] flex-shrink-0" />
+                <span>+40 744 49 31 49</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-200">
+                <IconPhone size={20} className="text-[#c8102e] flex-shrink-0" />
+                <span>+40 720 25 14 39</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-200">
+                <IconMail size={20} className="text-[#c8102e] flex-shrink-0" />
+                <span>autocarconstanta@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Copyright */}
@@ -129,7 +120,7 @@ const Footer = () => {
           <p className="text-gray-400 text-sm">
             &copy; {new Date().getFullYear()} {t("copyright")}
           </p>
-          <div className="flex gap-4 mt-3 md:mt-0">
+          <div className="flex gap-6 mt-3 md:mt-0">
             <Link
               href="/terms"
               className="text-gray-400 hover:text-white text-sm"

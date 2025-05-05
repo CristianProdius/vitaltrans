@@ -168,10 +168,11 @@
     "companyDescription": "Professional passenger transport services. Safe, comfortable, and reliable journeys for all travelers!",
     "contactUs": "Contact us",
     "contactInfo": {
-      "address": "Moldova, Romania",
-      "phone": "+373 7 606 14 66",
+      "addressTitle": "Adresa",
+      "address": "str. Ion Pruncul 12 of. 14, mun. Chișinău",
+      "phone": "+373 76 06 14 66",
       "email": "autocarconstanta@gmail.com",
-      "hours": "Daily: 8:00 AM - 8:00 PM"
+      "hours": "Zilnic 09:00 - 21:00"
     },
     "socialLinks": {
       "facebook": "Follow us on Facebook",
